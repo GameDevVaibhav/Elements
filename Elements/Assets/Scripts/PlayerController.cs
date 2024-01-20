@@ -8,11 +8,15 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     private bool isGrounded;
     private Animator animator;
+    SpriteRenderer r;
+    BoxCollider2D collider;
 
     void Start()
     {
         // Get the Animator component.
         animator = GetComponent<Animator>();
+        r = GetComponent<SpriteRenderer>();
+        collider= GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -26,7 +30,13 @@ public class PlayerController : MonoBehaviour
             Jump();
             
         }
-       // 
+        // 
+        
+       
+        Vector2 S = r.sprite.bounds.size;
+        collider.size = S;
+        collider.offset= Vector2.zero;  
+        
 
     }
 
