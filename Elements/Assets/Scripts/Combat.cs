@@ -24,11 +24,24 @@ public class Combat : MonoBehaviour
         }
 
         // Check for input to trigger the kick animation.
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && !Input.GetKey(KeyCode.S))
         {
             // Trigger the kick animation.
             animator.SetTrigger("Kick");
         }
+
+        // Check for input to trigger the power_punch animation.
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+        {
+            // Trigger the power_punch animation.
+            animator.SetTrigger("Power_Punch");
+        }
+
+        // Check for input to trigger the tackle animation.
+        if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
+        {
+            // Trigger the tackle animation.
+            animator.SetTrigger("Tackle");
+        }
     }
 }
-

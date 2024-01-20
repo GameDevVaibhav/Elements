@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Normal punch_0
+      name: Power Punch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 97
-        width: 420
-        height: 543
+        width: 421
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59807675f9e62684098bdbb64aaf06bc
-      internalID: 1650623690
+      spriteID: a7470fe4dce8a794c868caeb10a9ef99
+      internalID: -1144272526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal punch_1
+      name: Power Punch_1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 97
-        width: 420
-        height: 543
+        x: 436
+        y: 96
+        width: 375
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d16fc503f0c34e1408bfb2e65d235998
-      internalID: -1419650253
+      spriteID: decf684c1ac397e4292041adfff796e5
+      internalID: -222973395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal punch_2
+      name: Power Punch_2
       rect:
         serializedVersion: 2
-        x: 840
-        y: 97
-        width: 420
-        height: 543
+        x: 902
+        y: 96
+        width: 283
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 255f5d6c51ced034e92ddfa09cb06251
-      internalID: 1818219264
+      spriteID: 45a8a91ed6f07ec4ab7de489b7785b9f
+      internalID: 798919320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal punch_3
+      name: Power Punch_3
       rect:
         serializedVersion: 2
-        x: 1260
-        y: 97
-        width: 420
-        height: 543
+        x: 1361
+        y: 96
+        width: 211
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c04dd7ff40106cc42af5eeac09dec0e8
-      internalID: -658116414
+      spriteID: 4dfa24ac13072834cba78e2d54214c65
+      internalID: -1757264596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal punch_4
+      name: Power Punch_4
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 97
-        width: 420
-        height: 543
+        x: 1804
+        y: 96
+        width: 296
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf278c52b4a658a4e81f9d38729d5706
-      internalID: -683209354
+      spriteID: 6032006d276ad4447a1a840f45bfeaab
+      internalID: 336380027
       vertices: []
       indices: 
       edges: []
@@ -264,11 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Normal punch_0: 1650623690
-      Normal punch_1: -1419650253
-      Normal punch_2: 1818219264
-      Normal punch_3: -658116414
-      Normal punch_4: -683209354
+      Power Punch_0: -1144272526
+      Power Punch_1: -222973395
+      Power Punch_2: 798919320
+      Power Punch_3: -1757264596
+      Power Punch_4: 336380027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

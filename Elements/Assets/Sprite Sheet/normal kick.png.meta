@@ -152,10 +152,10 @@ TextureImporter:
       name: normal kick_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 97
-        width: 420
-        height: 543
+        x: 60
+        y: 96
+        width: 300
+        height: 494
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: normal kick_1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 97
-        width: 420
-        height: 543
+        x: 498
+        y: 96
+        width: 250
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: normal kick_2
       rect:
         serializedVersion: 2
-        x: 840
-        y: 97
-        width: 420
-        height: 543
+        x: 896
+        y: 95
+        width: 275
+        height: 506
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: normal kick_3
       rect:
         serializedVersion: 2
-        x: 1260
-        y: 97
-        width: 420
-        height: 543
+        x: 1279
+        y: 101
+        width: 312
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: normal kick_4
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 97
-        width: 420
-        height: 543
+        x: 1679
+        y: 108
+        width: 417
+        height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
