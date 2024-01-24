@@ -63,12 +63,18 @@ public class Combat : MonoBehaviour
                 animator.SetTrigger("Cross_Slash");
             }
 
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 
                 animator.SetTrigger("Smash");
             }
-            
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                animator.SetTrigger("Rock_Hit");
+            }
+
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
             {
                 
