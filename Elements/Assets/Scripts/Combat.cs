@@ -31,7 +31,7 @@ public class Combat : MonoBehaviour
             }
 
             
-            if (Input.GetKeyDown(KeyCode.K) && !Input.GetKey(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.K) && !Input.GetKey(KeyCode.S)&&!Input.GetKey(KeyCode.W))
             {
                 // Trigger the kick animation.
                 animator.SetTrigger("Kick");
@@ -91,7 +91,11 @@ public class Combat : MonoBehaviour
                 
                 animator.SetTrigger("Tackle");
             }
+            if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.K))
+            {
 
+                animator.SetTrigger("Spin_Kick");
+            }
         }
     }
 }
