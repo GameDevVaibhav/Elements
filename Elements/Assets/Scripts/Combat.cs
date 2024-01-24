@@ -107,6 +107,11 @@ public class Combat : MonoBehaviour
 
                 animator.SetTrigger("Arrow_Throw");
             }
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+
+                animator.SetTrigger("Clear");
+            }
         }
     }
 }
