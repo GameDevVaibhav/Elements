@@ -80,7 +80,13 @@ public class Combat : MonoBehaviour
                 animator.SetTrigger("Rock_Hit");
             }
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z)&& !Input.GetKey(KeyCode.LeftShift))
+            {
+
+                animator.SetTrigger("Top-Bottom_Throw");
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift)&& Input.GetKeyDown(KeyCode.Z))
             {
 
                 animator.SetTrigger("Ultimate_Throw");
