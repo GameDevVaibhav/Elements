@@ -102,6 +102,11 @@ public class Combat : MonoBehaviour
 
                 animator.SetTrigger("Spin_Kick");
             }
+            if (Input.GetKey(KeyCode.F))
+            {
+
+                animator.SetTrigger("Arrow_Throw");
+            }
         }
     }
 }
