@@ -80,6 +80,12 @@ public class Combat : MonoBehaviour
                 animator.SetTrigger("Rock_Hit");
             }
 
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+
+                animator.SetTrigger("Ultimate_Throw");
+            }
+
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
             {
                 
