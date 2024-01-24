@@ -24,7 +24,7 @@ public class Combat : MonoBehaviour
         else
         {
             
-            if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
             {
                 // Trigger the punch animation.
                 animator.SetTrigger("Punch");
@@ -36,8 +36,13 @@ public class Combat : MonoBehaviour
                 // Trigger the kick animation.
                 animator.SetTrigger("Kick");
             }
+            if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.S))
+            {
+                // Trigger the kick animation.
+                animator.SetTrigger("Power_Hit");
+            }
 
-            
+
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
             {
                 
