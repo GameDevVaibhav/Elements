@@ -5,10 +5,12 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     private Animator animator;
+    public VFX vfx;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         // Get the Animator component.
         animator = GetComponent<Animator>();
     }
@@ -52,7 +54,7 @@ public class Combat : MonoBehaviour
             
             if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.L))
             {
-                
+                vfx.Upper_Slash();
                 animator.SetTrigger("Upper_Slash");
             }
 
@@ -94,7 +96,7 @@ public class Combat : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
             {
-                
+                vfx.Tackle();
                 animator.SetTrigger("Tackle");
             }
             if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.K))
