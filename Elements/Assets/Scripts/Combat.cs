@@ -60,7 +60,7 @@ public class Combat : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.L))
             {
-                
+                vfx.Front_Slash();
                 animator.SetTrigger("Front_Slash");
             }
 
@@ -72,7 +72,7 @@ public class Combat : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.X))
             {
-                
+                vfx.Smash();
                 animator.SetTrigger("Smash");
             }
 

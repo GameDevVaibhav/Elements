@@ -7,6 +7,9 @@ public class VFX : MonoBehaviour
 
     public GameObject tackleVFX;
     public GameObject upperSlashVFX;
+    public GameObject smashVFX;
+    public GameObject frontSlashVFX;
+    public GameObject frontSlash2VFX;
 
     // Example delay duration
     
@@ -24,6 +27,18 @@ public class VFX : MonoBehaviour
     {
         StartCoroutine(SpawnVFXWithDelay(upperSlashVFX,0.3f));
     }
+    public void Smash()
+    {
+        StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f));
+    }
+
+    public void Front_Slash()
+    {
+        StartCoroutine(SpawnVFXWithDelay(frontSlashVFX, 0.5f));
+        StartCoroutine(SpawnVFXWithDelay(frontSlash2VFX, 0.9f));
+    }
+
+
 
     private IEnumerator SpawnVFXWithDelay(GameObject vfxPrefab,float delayDuration)
     {

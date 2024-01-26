@@ -617,6 +617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tackleVFX: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
   upperSlashVFX: {fileID: 3051007112789763784, guid: 7bb9af77239eace4aa0b83b3396170b2, type: 3}
+  smashVFX: {fileID: 2014839059195455811, guid: 53a2adaeeef2b114190862465c7751d1, type: 3}
+  frontSlashVFX: {fileID: 6979944892923832764, guid: 0ecf18b9a4b70b44eb72f63fb51781a1, type: 3}
+  frontSlash2VFX: {fileID: 6979944892923832764, guid: 4c11a2c7934eee0418a09011549d139c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
