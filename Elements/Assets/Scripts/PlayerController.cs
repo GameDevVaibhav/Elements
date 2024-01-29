@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && IsCurrentAnimation("Idle"))
         {
             Jump();
             
@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour
 
         // Trigger the Jump animation.
         animator.SetBool("isJumping", true);
+    }
+
+    private bool IsCurrentAnimation(string animationName)
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName(animationName);
     }
 
     public void OnGround()

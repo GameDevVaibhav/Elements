@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfx: {fileID: 1624625697}
+  isCombatInProgress: 0
 --- !u!114 &1546097997
 MonoBehaviour:
   m_ObjectHideFlags: 0
