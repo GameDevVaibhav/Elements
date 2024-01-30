@@ -7,7 +7,7 @@ public class Combat : MonoBehaviour
     private Animator animator;
     public VFX vfx;
 
-    public bool isCombatInProgress = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +19,7 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsCurrentAnimation("Idle"))
-        {
-            isCombatInProgress =false;
-        }
+        
         
         if (animator.GetBool("isJumping"))
         {
@@ -31,7 +28,7 @@ public class Combat : MonoBehaviour
         else
         {
             // Check if combat is in progress before processing new combat inputs
-            if (!isCombatInProgress)
+            if (IsCurrentAnimation("Idle"))
             {
                 if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
                 {
@@ -131,11 +128,11 @@ public class Combat : MonoBehaviour
     // Method to start combat action and prevent multiple triggers
     private void StartCombatAction(string triggerName)
     {
-        // Set the combat flag to true
-        isCombatInProgress = true;
+       
 
         // Trigger the combat action animation
         animator.SetTrigger(triggerName);
+        vfx.HandleVFX(triggerName);
 
         
     }

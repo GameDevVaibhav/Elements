@@ -10,6 +10,7 @@ public class VFX : MonoBehaviour
     public GameObject smashVFX;
     public GameObject frontSlashVFX;
     public GameObject frontSlash2VFX;
+    public GameObject topBottomThrowVFX;
 
     Combat combat;
 
@@ -24,30 +25,35 @@ public class VFX : MonoBehaviour
         switch (combatAction)
         {
             case "Tackle":
-                StartCoroutine(SpawnVFXWithDelay(tackleVFX, 0.5f));
+                StartCoroutine(SpawnVFXWithDelay(tackleVFX, 0.5f,Vector3.zero));
                 break;
             case "Upper_Slash":
-                StartCoroutine(SpawnVFXWithDelay(upperSlashVFX, 0.3f));
+                StartCoroutine(SpawnVFXWithDelay(upperSlashVFX, 0.3f,Vector3.zero));
                 break;
             case "Smash":
-                StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f));
+                StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f,Vector3.zero));
                 break;
             case "Front_Slash":
-                StartCoroutine(SpawnVFXWithDelay(frontSlashVFX, 0.5f));
-                StartCoroutine(SpawnVFXWithDelay(frontSlash2VFX, 0.9f));
+                StartCoroutine(SpawnVFXWithDelay(frontSlashVFX, 0.5f,Vector3.zero));
+                StartCoroutine(SpawnVFXWithDelay(frontSlash2VFX, 0.9f, Vector3.zero));
                 break;
-                // Add more cases for other combat actions
+            case "Top-Bottom_Throw":
+                StartCoroutine(SpawnVFXWithDelay(topBottomThrowVFX,0.3f,new Vector3(0f,5f,0f)));
+                break;
         }
     }
 
-    private IEnumerator SpawnVFXWithDelay(GameObject vfxPrefab, float delayDuration)
+    private IEnumerator SpawnVFXWithDelay(GameObject vfxPrefab, float delayDuration,Vector3 offset)
     {
         // Wait for the specified delay duration
         yield return new WaitForSeconds(delayDuration);
 
         // Instantiate the VFX at the position of the VFXSpawnner object
-        Instantiate(vfxPrefab, transform.position, Quaternion.identity);
+        Instantiate(vfxPrefab, transform.position+offset, Quaternion.identity);
 
         
     }
+
+    
+    
 }
