@@ -8,6 +8,7 @@ public class VFXMovement : MonoBehaviour
     public float speed = 5f;
     public float delay;
     public float moveUpDuration = 0.9f; // Duration for the upward movement
+    public float height;
 
     private Transform target;
     private bool hasMovedUp = false;
@@ -44,7 +45,7 @@ public class VFXMovement : MonoBehaviour
         {
             float elapsedTime = 0f;
             Vector3 startPosition = transform.position;
-            Vector3 targetPosition = transform.position + Vector3.up * 1.5f;
+            Vector3 targetPosition = transform.position + Vector3.up * height;
 
             while (elapsedTime < moveUpDuration)
             {

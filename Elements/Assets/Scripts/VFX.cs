@@ -13,6 +13,8 @@ public class VFX : MonoBehaviour
     public GameObject topBottomThrowVFX;
     public GameObject Spin_KickVFX;
     public GameObject Rock_HitVFX;
+    public GameObject ultimateThrowVFX;
+    
 
     Combat combat;
 
@@ -48,6 +50,17 @@ public class VFX : MonoBehaviour
             case "Rock_Hit":
                 StartCoroutine(SpawnVFXWithDelay(Rock_HitVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
                 break;
+            case "Ultimate_Throw":
+                Debug.Log("Ultimate_Throw");
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(-2f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(-1f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(0f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(1f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(2f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(3f, -2.5f, 0f)));
+                break;
+
         }
     }
 

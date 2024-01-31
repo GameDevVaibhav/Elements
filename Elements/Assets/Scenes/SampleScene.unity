@@ -667,6 +667,7 @@ MonoBehaviour:
   topBottomThrowVFX: {fileID: 152147058953754064, guid: 8802c91e87a0bc4499663ef16d7c0a02, type: 3}
   Spin_KickVFX: {fileID: 5870620260078445116, guid: 911f9032f488bd047b00b2c398bf0143, type: 3}
   Rock_HitVFX: {fileID: 152147058953754064, guid: f7e7bfbd041b94d459692275b1018570, type: 3}
+  ultimateThrowVFX: {fileID: 152147058953754064, guid: 799026603b72b0d4e9653dca26f0f560, type: 3}
 --- !u!1 &1945800805
 GameObject:
   m_ObjectHideFlags: 0
