@@ -12,6 +12,7 @@ public class VFX : MonoBehaviour
     public GameObject frontSlash2VFX;
     public GameObject topBottomThrowVFX;
     public GameObject Spin_KickVFX;
+    public GameObject Rock_HitVFX;
 
     Combat combat;
 
@@ -43,6 +44,9 @@ public class VFX : MonoBehaviour
                 break;
             case "Spin_Kick":
                 StartCoroutine(SpawnVFXWithDelay(Spin_KickVFX, 0.9f, new Vector3(0f, 0f, 0f)));
+                break;
+            case "Rock_Hit":
+                StartCoroutine(SpawnVFXWithDelay(Rock_HitVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
                 break;
         }
     }
