@@ -669,7 +669,8 @@ MonoBehaviour:
   Rock_HitVFX: {fileID: 152147058953754064, guid: f7e7bfbd041b94d459692275b1018570, type: 3}
   ultimateThrowVFX: {fileID: 152147058953754064, guid: 799026603b72b0d4e9653dca26f0f560, type: 3}
   longPowerHitVFX: {fileID: 152147058953754064, guid: 06bb01a517e23d5459b087eb1d87b5dc, type: 3}
-  longPowerHitSlashVFX: {fileID: 0}
+  longPowerHitSlashVFX: {fileID: 5870620260078445116, guid: 5ddddc8bd858c2049bcdca6dbe7454ec, type: 3}
+  arrowThrowVFX: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
 --- !u!1 &1945800805
 GameObject:
   m_ObjectHideFlags: 0

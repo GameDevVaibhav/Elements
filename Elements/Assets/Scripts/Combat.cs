@@ -115,7 +115,7 @@ public class Combat : MonoBehaviour
                     StartCombatAction("Spin_Kick");
                 }
 
-                if (Input.GetKey(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     // Trigger the arrow throw animation.
                     StartCombatAction("Arrow_Throw");
