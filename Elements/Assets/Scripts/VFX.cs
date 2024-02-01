@@ -17,6 +17,7 @@ public class VFX : MonoBehaviour
     public GameObject longPowerHitVFX;
     public GameObject longPowerHitSlashVFX;
     public GameObject arrowThrowVFX;
+    public GameObject arrowVFX;
 
     Combat combat;
 
@@ -68,6 +69,10 @@ public class VFX : MonoBehaviour
                 break;
             case "Arrow_Throw":
                 StartCoroutine(SpawnVFXWithDelay(arrowThrowVFX, 0.3f, new Vector3(0f, 0f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 0.5f, new Vector3(-3.5f, 0.4f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 0.8f, new Vector3(-3.5f, 0.4f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.5f, new Vector3(-3.5f, 0.4f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.6f, new Vector3(-3.5f, 0.4f, 0f)));
                 break;
         }
     }
