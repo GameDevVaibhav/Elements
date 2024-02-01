@@ -4923,6 +4923,7 @@ MonoBehaviour:
   delay: 0.6
   moveUpDuration: 1
   height: 0
+  time: 1
 --- !u!1 &1274392088412118397
 GameObject:
   m_ObjectHideFlags: 0

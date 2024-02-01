@@ -27,6 +27,11 @@ public class CombatMovement : MonoBehaviour
         StartCoroutine(MovePlayerUpAndLeft(0.8f));
     }
 
+    public void LongPowerHit()
+    {
+        StartCoroutine(MovePlayerUpAndLeft(1.04f));
+    }
+
     IEnumerator MovePlayerInArc(float jumpDuration)
     {
         Vector3 startPosition = transform.position;

@@ -7,13 +7,14 @@ public class Combat : MonoBehaviour
     private Animator animator;
     public VFX vfx;
 
-    
+    CombatMovement combatMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the Animator component.
         animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -46,6 +47,12 @@ public class Combat : MonoBehaviour
                 {
                     // Trigger the power hit animation.
                     StartCombatAction("Power_Hit");
+                }
+
+                if (Input.GetKeyDown(KeyCode.Q)&&!Input.GetKey(KeyCode.LeftShift))
+                {
+                    StartCombatAction("Long_Power_Hit");
+                   
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))

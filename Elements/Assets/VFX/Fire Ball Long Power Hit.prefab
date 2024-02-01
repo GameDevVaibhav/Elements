@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2147959781517260841}
   - component: {fileID: -8330166929335288640}
   - component: {fileID: -6144966002624205652}
-  - component: {fileID: -2214168623086704076}
+  - component: {fileID: -7971862637421865682}
   m_Layer: 0
-  m_Name: Fire Ball Hit
-  m_TagString: Rock_Hit
+  m_Name: Fire Ball Long Power Hit
+  m_TagString: Long_Power_Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6036339705218310299}
@@ -4906,7 +4906,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-2214168623086704076
+--- !u!114 &-7971862637421865682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4915,15 +4915,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 152147058953754064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365b36715dd31c54f87e5cb5e8698b62, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d4888761753e5e4ba80884f3e225f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Opponent
-  speed: 30
-  delay: 0.5
-  moveUpDuration: 0.09
-  height: 1.5
-  time: 1
+  rotationSpeed: 175
+  movementSpeed: 2
 --- !u!1 &1274392088412118397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4947,7 @@ Transform:
   m_GameObject: {fileID: 1274392088412118397}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12.8, y: -8.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

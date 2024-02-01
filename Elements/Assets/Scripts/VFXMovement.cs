@@ -12,15 +12,22 @@ public class VFXMovement : MonoBehaviour
 
     private Transform target;
     private bool hasMovedUp = false;
+    public float time = 1.0f;
+     
 
     void Start()
     {
         FindTarget();
+        
     }
 
     void Update()
     {
-        StartCoroutine(MoveAfterDelay());
+      
+        
+            StartCoroutine(MoveAfterDelay());
+        
+
     }
 
     void FindTarget()
@@ -60,12 +67,22 @@ public class VFXMovement : MonoBehaviour
         }
     }
 
+    public void  MoveInArc()
+    {
+       
+
+
+    }
+
+    
+
     private IEnumerator MoveAfterDelay()
     {
         if (gameObject.CompareTag("Rock_Hit"))
         {
             yield return MoveUp();
         }
+       
 
         yield return new WaitForSeconds(delay);
         MoveTowardsTarget();

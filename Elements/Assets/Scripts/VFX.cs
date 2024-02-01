@@ -14,7 +14,8 @@ public class VFX : MonoBehaviour
     public GameObject Spin_KickVFX;
     public GameObject Rock_HitVFX;
     public GameObject ultimateThrowVFX;
-    
+    public GameObject longPowerHitVFX;
+    public GameObject longPowerHitSlashVFX;
 
     Combat combat;
 
@@ -60,7 +61,10 @@ public class VFX : MonoBehaviour
                 StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(2f, -2.5f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(3f, -2.5f, 0f)));
                 break;
-
+            case "Long_Power_Hit":
+                StartCoroutine(SpawnVFXWithDelay(longPowerHitVFX, 0.3f, new Vector3(0f, 0f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(longPowerHitSlashVFX, 1.3f, new Vector3(0f, 0f, 0f)));
+                break;
         }
     }
 
