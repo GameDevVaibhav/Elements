@@ -8,6 +8,8 @@ TagManager:
   - Opponent
   - Rock_Hit
   - Long_Power_Hit
+  - Player_Fire
+  - Player_Water
   layers:
   - Default
   - TransparentFX

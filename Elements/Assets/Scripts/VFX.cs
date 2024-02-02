@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VFX : MonoBehaviour
 {
-
+    [Header("Fire VFX")]
     public GameObject tackleVFX;
     public GameObject upperSlashVFX;
     public GameObject smashVFX;
@@ -19,11 +19,16 @@ public class VFX : MonoBehaviour
     public GameObject arrowThrowVFX;
     public GameObject arrowVFX;
 
-    Combat combat;
+    
 
+    Combat combat;
+    public GameObject player;
+    string playerType;
     private void Start()
     {
         combat = FindObjectOfType<Combat>();
+        playerType=player.tag.ToString();
+        Debug.Log(playerType);
     }
 
     public void HandleVFX(string combatAction)
@@ -32,10 +37,20 @@ public class VFX : MonoBehaviour
         switch (combatAction)
         {
             case "Tackle":
-                StartCoroutine(SpawnVFXWithDelay(tackleVFX, 0.5f,Vector3.zero));
+                
+                {
+                    StartCoroutine(SpawnVFXWithDelay(tackleVFX, 0.5f, Vector3.zero));
+                }
+                
+                
                 break;
             case "Upper_Slash":
-                StartCoroutine(SpawnVFXWithDelay(upperSlashVFX, 0.3f,Vector3.zero));
+                
+                
+                    StartCoroutine(SpawnVFXWithDelay(upperSlashVFX, 0.3f, Vector3.zero));
+                
+                
+                
                 break;
             case "Smash":
                 StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f,Vector3.zero));
