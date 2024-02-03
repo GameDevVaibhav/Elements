@@ -10,6 +10,9 @@ TagManager:
   - Long_Power_Hit
   - Player_Fire
   - Player_Water
+  - Target_L
+  - Target_M
+  - Target_R
   layers:
   - Default
   - TransparentFX

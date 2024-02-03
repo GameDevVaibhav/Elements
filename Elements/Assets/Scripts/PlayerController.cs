@@ -21,9 +21,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
+        Debug.Log(horizontalInput);
 
         if (Input.GetButtonDown("Jump") && isGrounded && IsCurrentAnimation("Idle"))
         {

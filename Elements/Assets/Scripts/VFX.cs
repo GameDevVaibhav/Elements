@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VFX : MonoBehaviour
 {
-    [Header("Fire VFX")]
+    
     public GameObject tackleVFX;
     public GameObject upperSlashVFX;
     public GameObject smashVFX;
@@ -18,17 +18,17 @@ public class VFX : MonoBehaviour
     public GameObject longPowerHitSlashVFX;
     public GameObject arrowThrowVFX;
     public GameObject arrowVFX;
+    public GameObject crossSlashVFX;
 
     
 
     Combat combat;
-    public GameObject player;
-    string playerType;
+    
     private void Start()
     {
         combat = FindObjectOfType<Combat>();
-        playerType=player.tag.ToString();
-        Debug.Log(playerType);
+        
+        
     }
 
     public void HandleVFX(string combatAction)
@@ -89,6 +89,9 @@ public class VFX : MonoBehaviour
                 StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.5f, new Vector3(-3.5f, 0.4f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.6f, new Vector3(-3.5f, 0.4f, 0f)));
                 break;
+            case "Cross_Slash":
+                StartCoroutine(SpawnVFXWithDelay(crossSlashVFX, 1.2f, new Vector3(0f, 0f, 0f)));
+                break;
         }
     }
 
@@ -98,7 +101,12 @@ public class VFX : MonoBehaviour
         yield return new WaitForSeconds(delayDuration);
 
         // Instantiate the VFX at the position of the VFXSpawnner object
-        Instantiate(vfxPrefab, transform.position+offset, Quaternion.identity);
+        GameObject spawnedVfx=Instantiate(vfxPrefab, transform.position+offset, Quaternion.identity);
+
+        if(vfxPrefab==crossSlashVFX)
+        {
+            Destroy(spawnedVfx,1f);
+        }
 
         
     }

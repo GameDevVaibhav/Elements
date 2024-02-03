@@ -269,18 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bcaa8606edc25449c47a62fb8aaba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tackleFireVFX: {fileID: 0}
-  upperSlashVFX: {fileID: 3051007112789763784, guid: 7bb9af77239eace4aa0b83b3396170b2, type: 3}
-  smashVFX: {fileID: 2014839059195455811, guid: 53a2adaeeef2b114190862465c7751d1, type: 3}
-  frontSlashVFX: {fileID: 6979944892923832764, guid: 0ecf18b9a4b70b44eb72f63fb51781a1, type: 3}
-  frontSlash2VFX: {fileID: 6979944892923832764, guid: 4c11a2c7934eee0418a09011549d139c, type: 3}
-  topBottomThrowVFX: {fileID: 152147058953754064, guid: 8802c91e87a0bc4499663ef16d7c0a02, type: 3}
-  Spin_KickVFX: {fileID: 5870620260078445116, guid: 911f9032f488bd047b00b2c398bf0143, type: 3}
-  Rock_HitVFX: {fileID: 152147058953754064, guid: f7e7bfbd041b94d459692275b1018570, type: 3}
-  ultimateThrowVFX: {fileID: 152147058953754064, guid: 799026603b72b0d4e9653dca26f0f560, type: 3}
-  longPowerHitVFX: {fileID: 152147058953754064, guid: 06bb01a517e23d5459b087eb1d87b5dc, type: 3}
-  longPowerHitSlashVFX: {fileID: 5870620260078445116, guid: 5ddddc8bd858c2049bcdca6dbe7454ec, type: 3}
-  arrowThrowVFX: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
-  arrowVFX: {fileID: 3824398551635068440, guid: c8bfa37a6d3064640b6107519f6c8b38, type: 3}
-  tacleWaterVFX: {fileID: 0}
-  player: {fileID: 0}
+  tackleVFX: {fileID: 6111499304651949575, guid: b7cb6aff69766964083fea17304b1aa7, type: 3}
+  upperSlashVFX: {fileID: 4840577294537927888, guid: 4a2cd2237a9abe74ca5a07db809a3f11, type: 3}
+  smashVFX: {fileID: 2496536428257794416, guid: f82edd5f32fd7134a85f618f65fcfc99, type: 3}
+  frontSlashVFX: {fileID: 4678476411102069892, guid: 355dcfd03e567364d99733b4a2248363, type: 3}
+  frontSlash2VFX: {fileID: 6480975344428647794, guid: d066e6e0817bbcf45b88ddd91f2c28c9, type: 3}
+  topBottomThrowVFX: {fileID: 5482330157396456084, guid: 0d3cfe329b6051c42a11db4c8cbe9c30, type: 3}
+  Spin_KickVFX: {fileID: 771470417359366841, guid: c6d9a779e0e34e44d83f6dd68b38a0b8, type: 3}
+  Rock_HitVFX: {fileID: 2672896929239682097, guid: edc6cae252d53c048940ad1db79a538d, type: 3}
+  ultimateThrowVFX: {fileID: 1879557844117364332, guid: 0aa0b9a7ac2709c47a2cda2ba8f5146b, type: 3}
+  longPowerHitVFX: {fileID: 7826233440925916350, guid: 63f96e490546e8d4595878c12fe4e72a, type: 3}
+  longPowerHitSlashVFX: {fileID: 2671160968900942478, guid: e3d9213f21800a54a95ee1a291aba11c, type: 3}
+  arrowThrowVFX: {fileID: 7610956249698390203, guid: 88f2b0bf7394bc14e81566276b17b3c2, type: 3}
+  arrowVFX: {fileID: 8435576465026244127, guid: 4f74cf66641573845b94b0a980ca539c, type: 3}
