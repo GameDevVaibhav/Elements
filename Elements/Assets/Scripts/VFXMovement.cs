@@ -82,7 +82,8 @@ public class VFXMovement : MonoBehaviour
         {
             yield return MoveUp();
         }
-       
+
+        
 
         yield return new WaitForSeconds(delay);
         MoveTowardsTarget();

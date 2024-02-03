@@ -282,3 +282,4 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 2671160968900942478, guid: e3d9213f21800a54a95ee1a291aba11c, type: 3}
   arrowThrowVFX: {fileID: 7610956249698390203, guid: 88f2b0bf7394bc14e81566276b17b3c2, type: 3}
   arrowVFX: {fileID: 8435576465026244127, guid: 4f74cf66641573845b94b0a980ca539c, type: 3}
+  crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}

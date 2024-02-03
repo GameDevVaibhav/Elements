@@ -19,6 +19,7 @@ public class VFX : MonoBehaviour
     public GameObject arrowThrowVFX;
     public GameObject arrowVFX;
     public GameObject crossSlashVFX;
+    public GameObject powerHitVFX;
 
     
 
@@ -91,6 +92,11 @@ public class VFX : MonoBehaviour
                 break;
             case "Cross_Slash":
                 StartCoroutine(SpawnVFXWithDelay(crossSlashVFX, 1.2f, new Vector3(0f, 0f, 0f)));
+                
+                break;
+            case "Power_Hit":
+                StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(0f, 0f, 0f)));
+                
                 break;
         }
     }
@@ -107,8 +113,11 @@ public class VFX : MonoBehaviour
         {
             Destroy(spawnedVfx,1f);
         }
+        if (vfxPrefab == powerHitVFX)
+        {
+            Destroy(spawnedVfx, 1f);
+        }
 
-        
     }
 
     

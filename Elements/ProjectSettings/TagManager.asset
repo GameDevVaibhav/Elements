@@ -13,6 +13,7 @@ TagManager:
   - Target_L
   - Target_M
   - Target_R
+  - LightningCross
   layers:
   - Default
   - TransparentFX
