@@ -22,7 +22,7 @@ public class VFX : MonoBehaviour
     public GameObject powerHitVFX;
     public GameObject lightningTarget;
 
-    
+    public GameObject playerLightning;
 
     Combat combat;
     
@@ -72,13 +72,24 @@ public class VFX : MonoBehaviour
                 break;
             case "Ultimate_Throw":
                 Debug.Log("Ultimate_Throw");
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(-2f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(-1f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(0f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(1f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(2f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(3f, -2.5f, 0f)));
+
+                if (playerLightning.CompareTag("Player_Lightning"))
+                {
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(0f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(-4f, 0f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(-8f, 2f, 0f)));
+                }
+                else
+                {
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(-2f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(-1f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(0f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.5f, new Vector3(1f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.4f, new Vector3(2f, -2.5f, 0f)));
+                    StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 0.7f, new Vector3(3f, -2.5f, 0f)));
+                }
+                
                 break;
             case "Long_Power_Hit":
                 StartCoroutine(SpawnVFXWithDelay(longPowerHitVFX, 0.3f, new Vector3(0f, 0f, 0f)));
@@ -115,6 +126,10 @@ public class VFX : MonoBehaviour
             Destroy(spawnedVfx,1f);
         }
         if (vfxPrefab == powerHitVFX)
+        {
+            Destroy(spawnedVfx, 1f);
+        }
+        if(vfxPrefab == ultimateThrowVFX)
         {
             Destroy(spawnedVfx, 1f);
         }
