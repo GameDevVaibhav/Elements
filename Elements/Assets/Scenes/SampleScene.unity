@@ -633,13 +633,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bcaa8606edc25449c47a62fb8aaba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tackleVFX: {fileID: 6111499304651949575, guid: b7cb6aff69766964083fea17304b1aa7, type: 3}
-  upperSlashVFX: {fileID: 4840577294537927888, guid: 4a2cd2237a9abe74ca5a07db809a3f11, type: 3}
-  smashVFX: {fileID: 2496536428257794416, guid: f82edd5f32fd7134a85f618f65fcfc99, type: 3}
-  frontSlashVFX: {fileID: 4678476411102069892, guid: 355dcfd03e567364d99733b4a2248363, type: 3}
-  frontSlash2VFX: {fileID: 6480975344428647794, guid: d066e6e0817bbcf45b88ddd91f2c28c9, type: 3}
+  tackleVFX: {fileID: 6390222001088453595, guid: 3995698ee95c6254a830683a06b28572, type: 3}
+  upperSlashVFX: {fileID: 1326599102873781284, guid: 1128e16d1d0c955449ae5e8775f6f625, type: 3}
+  smashVFX: {fileID: 6070074767597311619, guid: 0c36569d937026c4984fa97ee97fec5a, type: 3}
+  frontSlashVFX: {fileID: 185722915041767618, guid: b767919162f65f24d916bdf6f3cd0d4b, type: 3}
+  frontSlash2VFX: {fileID: 7123525354933738029, guid: a042c39bef57e994880799c7d9203591, type: 3}
   topBottomThrowVFX: {fileID: 5482330157396456084, guid: 0d3cfe329b6051c42a11db4c8cbe9c30, type: 3}
-  Spin_KickVFX: {fileID: 771470417359366841, guid: c6d9a779e0e34e44d83f6dd68b38a0b8, type: 3}
+  Spin_KickVFX: {fileID: 1688006569435356956, guid: 205661695e5fb47488d279fb6e1d1e3b, type: 3}
   Rock_HitVFX: {fileID: 2672896929239682097, guid: edc6cae252d53c048940ad1db79a538d, type: 3}
   ultimateThrowVFX: {fileID: 1879557844117364332, guid: 0aa0b9a7ac2709c47a2cda2ba8f5146b, type: 3}
   longPowerHitVFX: {fileID: 7826233440925916350, guid: 63f96e490546e8d4595878c12fe4e72a, type: 3}
@@ -647,8 +647,8 @@ MonoBehaviour:
   arrowThrowVFX: {fileID: 7610956249698390203, guid: 88f2b0bf7394bc14e81566276b17b3c2, type: 3}
   arrowVFX: {fileID: 8435576465026244127, guid: 4f74cf66641573845b94b0a980ca539c, type: 3}
   crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}
-  lightningTarget: {fileID: 6911779286278976219, guid: 8133a720f4bb7d7418f961e8edd1c113, type: 3}
   powerHitVFX: {fileID: 541977385707056074, guid: d50c1a4814285d549a740751b2a66103, type: 3}
+  lightningTarget: {fileID: 0}
 --- !u!1 &1136855586512628281
 GameObject:
   m_ObjectHideFlags: 0

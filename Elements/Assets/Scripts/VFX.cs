@@ -20,6 +20,7 @@ public class VFX : MonoBehaviour
     public GameObject arrowVFX;
     public GameObject crossSlashVFX;
     public GameObject powerHitVFX;
+    public GameObject lightningTarget;
 
     
 
@@ -96,7 +97,7 @@ public class VFX : MonoBehaviour
                 break;
             case "Power_Hit":
                 StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(0f, 0f, 0f)));
-                
+                //StartCoroutine(SpawnVFXWithDelay(lightningTarget, 1f, new Vector3(0f, 0f, 0f)));
                 break;
         }
     }
