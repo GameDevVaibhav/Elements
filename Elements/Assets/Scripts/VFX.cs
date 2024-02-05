@@ -23,6 +23,7 @@ public class VFX : MonoBehaviour
     public GameObject lightningTarget;
 
     public GameObject playerLightning;
+    public Transform Target;
 
     Combat combat;
     
@@ -107,8 +108,15 @@ public class VFX : MonoBehaviour
                 
                 break;
             case "Power_Hit":
-                StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(0f, 0f, 0f)));
-                //StartCoroutine(SpawnVFXWithDelay(lightningTarget, 1f, new Vector3(0f, 0f, 0f)));
+                if (playerLightning.CompareTag("Player_Earth"))
+                {
+                    StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(Target.position.x, 0f, Target.position.z)));;
+                }
+                else
+                {
+                    StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(0f, 0f, 0f)));
+                }
+                
                 break;
         }
     }

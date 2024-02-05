@@ -15,6 +15,7 @@ TagManager:
   - Target_R
   - LightningCross
   - Player_Lightning
+  - Player_Earth
   layers:
   - Default
   - TransparentFX
