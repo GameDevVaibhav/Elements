@@ -21,6 +21,7 @@ public class VFX : MonoBehaviour
     public GameObject crossSlashVFX;
     public GameObject powerHitVFX;
     public GameObject lightningTarget;
+    public GameObject smallRockVFX;
 
     public GameObject playerLightning;
     public Transform Target;
@@ -56,7 +57,15 @@ public class VFX : MonoBehaviour
                 
                 break;
             case "Smash":
-                StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f,Vector3.zero));
+                if (playerLightning.CompareTag("Player_Earth"))
+                {
+                    StartCoroutine(SpawnVFXWithDelay(smallRockVFX, 1.1f, new Vector3(-3f, 0f, 0f)));
+                }
+                else
+                {
+                    StartCoroutine(SpawnVFXWithDelay(smashVFX, 0.9f, Vector3.zero));
+                }
+                
                 break;
             case "Front_Slash":
                 StartCoroutine(SpawnVFXWithDelay(frontSlashVFX, 0.5f,Vector3.zero));
@@ -70,6 +79,10 @@ public class VFX : MonoBehaviour
                 break;
             case "Rock_Hit":
                 StartCoroutine(SpawnVFXWithDelay(Rock_HitVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
+                if (playerLightning.CompareTag("Player_Earth"))
+                {
+                    StartCoroutine(SpawnVFXWithDelay(smallRockVFX, 0.7f, new Vector3(-3f, 0f, 0f)));
+                }
                 break;
             case "Ultimate_Throw":
                 Debug.Log("Ultimate_Throw");
@@ -142,6 +155,10 @@ public class VFX : MonoBehaviour
             Destroy(spawnedVfx, 1f);
         }
 
+        if (vfxPrefab == smallRockVFX)
+        {
+            Destroy(spawnedVfx, 1f);
+        }
     }
 
     
