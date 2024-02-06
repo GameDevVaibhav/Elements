@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3a9df9228ea0489da978e229824c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfx: {fileID: 634519147368933367}
+  vfx: {fileID: 1835996214408408635}
 --- !u!114 &2239761786718333165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6151233585879618050}
-  - component: {fileID: 634519147368933367}
+  - component: {fileID: 1835996214408408635}
   m_Layer: 0
   m_Name: VFX Spawnner
   m_TagString: Untagged
@@ -257,7 +257,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4446030995793632637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &634519147368933367
+--- !u!114 &1835996214408408635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,9 +266,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1801478462298533413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58bcaa8606edc25449c47a62fb8aaba2, type: 3}
+  m_Script: {fileID: 11500000, guid: 48831893045839546a216afa2675b820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultVFX: {fileID: 0}
+  playerType: {fileID: 0}
   tackleVFX: {fileID: 6111499304651949575, guid: b7cb6aff69766964083fea17304b1aa7, type: 3}
   upperSlashVFX: {fileID: 4840577294537927888, guid: 4a2cd2237a9abe74ca5a07db809a3f11, type: 3}
   smashVFX: {fileID: 2496536428257794416, guid: f82edd5f32fd7134a85f618f65fcfc99, type: 3}
@@ -282,4 +284,3 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 2671160968900942478, guid: e3d9213f21800a54a95ee1a291aba11c, type: 3}
   arrowThrowVFX: {fileID: 7610956249698390203, guid: 88f2b0bf7394bc14e81566276b17b3c2, type: 3}
   arrowVFX: {fileID: 8435576465026244127, guid: 4f74cf66641573845b94b0a980ca539c, type: 3}
-  crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}

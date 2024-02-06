@@ -28,5 +28,6 @@ public class BaseVFX : MonoBehaviour
 
         // Instantiate the VFX at the position of the VFXSpawnner object
         GameObject spawnedVfx = Instantiate(vfxPrefab, transform.position + offset, Quaternion.identity);
+
     }
 }
