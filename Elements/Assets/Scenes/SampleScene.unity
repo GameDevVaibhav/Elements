@@ -253,6 +253,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &304055867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+  m_PrefabInstance: {fileID: 451118636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe6457b52bde8245bdf1bad7c3f96a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368115222
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +431,128 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &451118636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 56983741170945444, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_Name
+      value: Player_Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265596111214831886, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: vfx
+      value: 
+      objectReference: {fileID: 304055867}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446030995793632637, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: arrowVFX
+      value: 
+      objectReference: {fileID: 3824398551635068440, guid: c8bfa37a6d3064640b6107519f6c8b38, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: smashVFX
+      value: 
+      objectReference: {fileID: 2014839059195455811, guid: 53a2adaeeef2b114190862465c7751d1, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: tackleVFX
+      value: 
+      objectReference: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: defaultVFX
+      value: 
+      objectReference: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: playerType
+      value: 
+      objectReference: {fileID: 1341932741}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: Rock_HitVFX
+      value: 
+      objectReference: {fileID: 152147058953754064, guid: f7e7bfbd041b94d459692275b1018570, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: Spin_KickVFX
+      value: 
+      objectReference: {fileID: 5870620260078445116, guid: 911f9032f488bd047b00b2c398bf0143, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: arrowThrowVFX
+      value: 
+      objectReference: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: frontSlashVFX
+      value: 
+      objectReference: {fileID: 6979944892923832764, guid: 0ecf18b9a4b70b44eb72f63fb51781a1, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: upperSlashVFX
+      value: 
+      objectReference: {fileID: 3051007112789763784, guid: 7bb9af77239eace4aa0b83b3396170b2, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: frontSlash2VFX
+      value: 
+      objectReference: {fileID: 6979944892923832764, guid: 4c11a2c7934eee0418a09011549d139c, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: longPowerHitVFX
+      value: 
+      objectReference: {fileID: 152147058953754064, guid: 06bb01a517e23d5459b087eb1d87b5dc, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: ultimateThrowVFX
+      value: 
+      objectReference: {fileID: 152147058953754064, guid: 799026603b72b0d4e9653dca26f0f560, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: topBottomThrowVFX
+      value: 
+      objectReference: {fileID: 152147058953754064, guid: 8802c91e87a0bc4499663ef16d7c0a02, type: 3}
+    - target: {fileID: 8516631987960104731, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+      propertyPath: longPowerHitSlashVFX
+      value: 
+      objectReference: {fileID: 5870620260078445116, guid: 5ddddc8bd858c2049bcdca6dbe7454ec, type: 3}
+    m_RemovedComponents:
+    - {fileID: 634519147368933367, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +690,11 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &1341932741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 56983741170945444, guid: c27e28efa42db5c489169ad20fe77291, type: 3}
+  m_PrefabInstance: {fileID: 451118636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1945800805
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &634519145865176098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +906,7 @@ MonoBehaviour:
   powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
   lightningTarget: {fileID: 0}
   smallRockVFX: {fileID: 1951962608658211888, guid: 910c1ab768b6ead49ad5ff5f9ec61ee8, type: 3}
-  playerLightning: {fileID: 56983742607396465}
+  playerType: {fileID: 0}
   Target: {fileID: 1945800808}
 --- !u!1 &1136855586512628281
 GameObject:
@@ -884,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3a9df9228ea0489da978e229824c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfx: {fileID: 634519145865176098}
+  vfx: {fileID: 0}
 --- !u!50 &2379312997544973256
 Rigidbody2D:
   serializedVersion: 4
@@ -1141,3 +1279,4 @@ SceneRoots:
   - {fileID: 195673259}
   - {fileID: 368115224}
   - {fileID: 4446030994621226664}
+  - {fileID: 451118636}

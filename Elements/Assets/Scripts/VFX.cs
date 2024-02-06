@@ -23,7 +23,7 @@ public class VFX : MonoBehaviour
     public GameObject lightningTarget;
     public GameObject smallRockVFX;
 
-    public GameObject playerLightning;
+    public GameObject playerType;
     public Transform Target;
 
     Combat combat;
@@ -57,7 +57,7 @@ public class VFX : MonoBehaviour
                 
                 break;
             case "Smash":
-                if (playerLightning.CompareTag("Player_Earth"))
+                if (playerType.CompareTag("Player_Earth"))
                 {
                     StartCoroutine(SpawnVFXWithDelay(smallRockVFX, 1.1f, new Vector3(-3f, 0f, 0f)));
                 }
@@ -79,7 +79,7 @@ public class VFX : MonoBehaviour
                 break;
             case "Rock_Hit":
                 StartCoroutine(SpawnVFXWithDelay(Rock_HitVFX, 0.7f, new Vector3(-3f, -2.5f, 0f)));
-                if (playerLightning.CompareTag("Player_Earth"))
+                if (playerType.CompareTag("Player_Earth"))
                 {
                     StartCoroutine(SpawnVFXWithDelay(smallRockVFX, 0.7f, new Vector3(-3f, 0f, 0f)));
                 }
@@ -87,7 +87,7 @@ public class VFX : MonoBehaviour
             case "Ultimate_Throw":
                 Debug.Log("Ultimate_Throw");
 
-                if (playerLightning.CompareTag("Player_Lightning"))
+                if (playerType.CompareTag("Player_Lightning"))
                 {
                     StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(0f, -2.5f, 0f)));
                     StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(-4f, 0f, 0f)));
@@ -121,7 +121,7 @@ public class VFX : MonoBehaviour
                 
                 break;
             case "Power_Hit":
-                if (playerLightning.CompareTag("Player_Earth"))
+                if (playerType.CompareTag("Player_Earth"))
                 {
                     StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(Target.position.x, 0f, Target.position.z)));;
                 }
@@ -142,23 +142,23 @@ public class VFX : MonoBehaviour
         // Instantiate the VFX at the position of the VFXSpawnner object
         GameObject spawnedVfx=Instantiate(vfxPrefab, transform.position+offset, Quaternion.identity);
 
-        if(vfxPrefab==crossSlashVFX)
-        {
-            Destroy(spawnedVfx,1f);
-        }
-        if (vfxPrefab == powerHitVFX)
-        {
-            Destroy(spawnedVfx, 1f);
-        }
-        if(vfxPrefab == ultimateThrowVFX)
-        {
-            Destroy(spawnedVfx, 1f);
-        }
+        //if(vfxPrefab==crossSlashVFX)
+        //{
+        //    Destroy(spawnedVfx,1f);
+        //}
+        //if (vfxPrefab == powerHitVFX)
+        //{
+        //    Destroy(spawnedVfx, 1f);
+        //}
+        //if(vfxPrefab == ultimateThrowVFX)
+        //{
+        //    Destroy(spawnedVfx, 1f);
+        //}
 
-        if (vfxPrefab == smallRockVFX)
-        {
-            Destroy(spawnedVfx, 1f);
-        }
+        //if (vfxPrefab == smallRockVFX)
+        //{
+        //    Destroy(spawnedVfx, 1f);
+        //}
     }
 
     

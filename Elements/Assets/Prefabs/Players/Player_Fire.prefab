@@ -235,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6151233585879618050}
   - component: {fileID: 634519147368933367}
+  - component: {fileID: 8516631987960104731}
   m_Layer: 0
   m_Name: VFX Spawnner
   m_TagString: Untagged
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801478462298533413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58bcaa8606edc25449c47a62fb8aaba2, type: 3}
   m_Name: 
@@ -285,5 +286,37 @@ MonoBehaviour:
   crossSlashVFX: {fileID: 0}
   powerHitVFX: {fileID: 0}
   lightningTarget: {fileID: 0}
-  playerLightning: {fileID: 0}
+  smallRockVFX: {fileID: 0}
+  playerType: {fileID: 0}
   Target: {fileID: 0}
+--- !u!114 &8516631987960104731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801478462298533413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe6457b52bde8245bdf1bad7c3f96a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVFX: {fileID: 0}
+  playerType: {fileID: 0}
+  tackleVFX: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
+  upperSlashVFX: {fileID: 0}
+  smashVFX: {fileID: 0}
+  frontSlashVFX: {fileID: 0}
+  frontSlash2VFX: {fileID: 0}
+  topBottomThrowVFX: {fileID: 0}
+  Spin_KickVFX: {fileID: 0}
+  Rock_HitVFX: {fileID: 0}
+  ultimateThrowVFX: {fileID: 0}
+  longPowerHitVFX: {fileID: 0}
+  longPowerHitSlashVFX: {fileID: 0}
+  arrowThrowVFX: {fileID: 0}
+  arrowVFX: {fileID: 0}
+  crossSlashVFX: {fileID: 0}
+  powerHitVFX: {fileID: 0}
+  lightningTarget: {fileID: 0}
+  smallRockVFX: {fileID: 0}

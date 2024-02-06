@@ -5,7 +5,7 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     private Animator animator;
-    public VFX vfx;
+    public BaseVFX vfx;
 
     CombatMovement combatMovement;
 
