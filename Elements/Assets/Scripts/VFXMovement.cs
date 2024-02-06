@@ -7,12 +7,12 @@ public class VFXMovement : MonoBehaviour
     public string targetTag = "Opponent";
     public float speed = 5f;
     public float delay;
-    public float moveUpDuration = 0.9f; // Duration for the upward movement
+    public float moveUpDuration;
     public float height;
 
     private Transform target;
     private bool hasMovedUp = false;
-    public float time = 1.0f;
+    public float time;
      
 
     void Start()
@@ -48,6 +48,7 @@ public class VFXMovement : MonoBehaviour
 
     IEnumerator MoveUp()
     {
+        Debug.Log("Moved up");
         if (!hasMovedUp)
         {
             float elapsedTime = 0f;
@@ -67,12 +68,7 @@ public class VFXMovement : MonoBehaviour
         }
     }
 
-    public void  MoveInArc()
-    {
-       
 
-
-    }
 
     
 
@@ -80,10 +76,11 @@ public class VFXMovement : MonoBehaviour
     {
         if (gameObject.CompareTag("Rock_Hit"))
         {
+            Debug.Log("Its rockhit");
             yield return MoveUp();
         }
 
-        
+
 
         yield return new WaitForSeconds(delay);
         MoveTowardsTarget();

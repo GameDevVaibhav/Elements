@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &435675388272651824
+--- !u!1 &2436672282160183693
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,102 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3226327424414729811}
-  - component: {fileID: 1432358945825934885}
+  - component: {fileID: 7065126457281809849}
+  - component: {fileID: 3201035300735514228}
+  - component: {fileID: 7865378578949909245}
+  - component: {fileID: 5801011136045770838}
+  - component: {fileID: 8135474455307439946}
+  - component: {fileID: 117382356413520795}
+  - component: {fileID: 5824757566688919658}
+  - component: {fileID: 7520614372819827134}
   m_Layer: 0
-  m_Name: VFX Spawnner
-  m_TagString: Untagged
+  m_Name: Player_Earth
+  m_TagString: Player_Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3226327424414729811
+--- !u!4 &7065126457281809849
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435675388272651824}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4939423571578290158}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1432358945825934885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435675388272651824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 678bf3a1774066a46813b0f773c97da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVFX: {fileID: 0}
-  playerType: {fileID: 0}
-  tackleVFX: {fileID: 6390222001088453595, guid: 3995698ee95c6254a830683a06b28572, type: 3}
-  upperSlashVFX: {fileID: 1326599102873781284, guid: 1128e16d1d0c955449ae5e8775f6f625, type: 3}
-  smashVFX: {fileID: 6070074767597311619, guid: 0c36569d937026c4984fa97ee97fec5a, type: 3}
-  frontSlashVFX: {fileID: 185722915041767618, guid: b767919162f65f24d916bdf6f3cd0d4b, type: 3}
-  frontSlash2VFX: {fileID: 7123525354933738029, guid: a042c39bef57e994880799c7d9203591, type: 3}
-  topBottomThrowVFX: {fileID: 947666955498455946, guid: bb2f0f4dcb5125a448210482ef71b98d, type: 3}
-  Spin_KickVFX: {fileID: 1688006569435356956, guid: 205661695e5fb47488d279fb6e1d1e3b, type: 3}
-  ultimateThrowVFX: {fileID: 947666955498455946, guid: bb2f0f4dcb5125a448210482ef71b98d, type: 3}
-  crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}
-  powerHitVFX: {fileID: 541977385707056074, guid: d50c1a4814285d549a740751b2a66103, type: 3}
-  lightningTarget: {fileID: 0}
-  Target: {fileID: 0}
---- !u!1 &996822007886626883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4939423571578290158}
-  - component: {fileID: 6164304309775994166}
-  - component: {fileID: 4174007305825150811}
-  - component: {fileID: 1458759010454818843}
-  - component: {fileID: 495376477448862967}
-  - component: {fileID: 8673396700040925376}
-  - component: {fileID: 3217850082289795903}
-  - component: {fileID: 6866895782382107757}
-  m_Layer: 0
-  m_Name: Player_Lightning
-  m_TagString: Player_Lightning
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4939423571578290158
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.65, y: -4.42, z: 0}
+  m_LocalPosition: {x: 0, y: -4.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3226327424414729811}
+  - {fileID: 66054382476289846}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6164304309775994166
+--- !u!114 &3201035300735514228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e23b8acc3b9f744f830b9d184b9056a, type: 3}
@@ -111,26 +53,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 20
---- !u!114 &4174007305825150811
+--- !u!114 &7865378578949909245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9a3a9df9228ea0489da978e229824c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfx: {fileID: 1432358945825934885}
---- !u!114 &1458759010454818843
+  vfx: {fileID: 3714723656001641550}
+--- !u!114 &5801011136045770838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1700d4981836e0047b36d6d1a16cc880, type: 3}
@@ -138,13 +80,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 5
   forwardDistance: 2
---- !u!212 &495376477448862967
+--- !u!212 &8135474455307439946
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -190,14 +132,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8673396700040925376
+--- !u!50 &117382356413520795
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -217,13 +159,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3217850082289795903
+--- !u!61 &5824757566688919658
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -262,14 +204,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.702669, y: 5.0588694}
   m_EdgeRadius: 0
---- !u!95 &6866895782382107757
+--- !u!95 &7520614372819827134
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996822007886626883}
+  m_GameObject: {fileID: 2436672282160183693}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f9d31a7d1a8a76745993fb6552c14234, type: 2}
@@ -283,3 +225,65 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &7288693446781413516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66054382476289846}
+  - component: {fileID: 3714723656001641550}
+  m_Layer: 0
+  m_Name: VFX Spawnner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &66054382476289846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288693446781413516}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7065126457281809849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3714723656001641550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288693446781413516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d90dc54545a5d43aa8f40d0e5a53db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVFX: {fileID: 0}
+  playerType: {fileID: 0}
+  tackleVFX: {fileID: 8927743822268101615, guid: 4feafcc49059a1e46a9eedd2a3b6fe5b, type: 3}
+  upperSlashVFX: {fileID: 5836993572306199879, guid: 57fb177317ff80e4eba9fabdab54f846, type: 3}
+  smashVFX: {fileID: 1951962608658211888, guid: 910c1ab768b6ead49ad5ff5f9ec61ee8, type: 3}
+  frontSlashVFX: {fileID: 4175920025679831888, guid: 5694afdbb79b1af4ca2b56df8bd65ee8, type: 3}
+  frontSlash2VFX: {fileID: 4175920025679831888, guid: 5694afdbb79b1af4ca2b56df8bd65ee8, type: 3}
+  topBottomThrowVFX: {fileID: 0}
+  Spin_KickVFX: {fileID: 0}
+  Rock_HitVFX: {fileID: 1939380360377400462, guid: 1b2c873b1c82cea4bab7db636c43722b, type: 3}
+  smallRockVFX: {fileID: 1951962608658211888, guid: 910c1ab768b6ead49ad5ff5f9ec61ee8, type: 3}
+  ultimateThrowVFX: {fileID: 0}
+  longPowerHitVFX: {fileID: 0}
+  longPowerHitSlashVFX: {fileID: 0}
+  arrowThrowVFX: {fileID: 0}
+  arrowVFX: {fileID: 0}
+  powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
+  target: {fileID: 0}
