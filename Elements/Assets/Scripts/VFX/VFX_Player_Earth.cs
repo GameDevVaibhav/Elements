@@ -17,8 +17,6 @@ public class VFX_Player_Earth : BaseVFX
     public GameObject ultimateThrowVFX;
     public GameObject longPowerHitVFX;
     public GameObject longPowerHitSlashVFX;
-    public GameObject arrowThrowVFX;
-    public GameObject arrowVFX;
     public GameObject powerHitVFX;
 
     public Transform target;
@@ -28,6 +26,10 @@ public class VFX_Player_Earth : BaseVFX
     protected override void Start()
     {
         base.Start();
+
+        GameObject targetObject=GameObject.FindGameObjectWithTag("Opponent");
+
+        target = targetObject.transform;
         // Additional initialization for Player_Fire type
     }
 
@@ -74,13 +76,7 @@ public class VFX_Player_Earth : BaseVFX
                 StartCoroutine(SpawnVFXWithDelay(longPowerHitVFX, 0.3f, new Vector3(0f, 0f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(longPowerHitSlashVFX, 1.3f, new Vector3(0f, 0f, 0f)));
                 break;
-            case "Arrow_Throw":
-                StartCoroutine(SpawnVFXWithDelay(arrowThrowVFX, 0.3f, new Vector3(0f, 0f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 0.5f, new Vector3(-3.5f, 0.4f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 0.8f, new Vector3(-3.5f, 0.4f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.5f, new Vector3(-3.5f, 0.4f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(arrowVFX, 1.6f, new Vector3(-3.5f, 0.4f, 0f)));
-                break;
+            
             case "Power_Hit":
                 StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(target.position.x, 0f, target.position.z)));
                 break;

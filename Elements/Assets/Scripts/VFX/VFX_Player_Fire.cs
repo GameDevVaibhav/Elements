@@ -17,7 +17,8 @@ public class VFX_Player_Fire : BaseVFX
     public GameObject longPowerHitSlashVFX;
     public GameObject arrowThrowVFX;
     public GameObject arrowVFX;
-    
+
+    public GameObject player;
 
     // Override the Start method if needed for specific initialization
     protected override void Start()

@@ -9,7 +9,8 @@ public class LightningPoints : MonoBehaviour
     private VisualEffect visualEffect;
 
     // Reference to the GameObject whose transform will be used
-     GameObject targetObject;
+    GameObject targetObject;
+    
     public string targetTag;
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class LightningPoints : MonoBehaviour
         {
             // Set the Vector3 property of the VisualEffect component to the position of the targetObject
             visualEffect.SetVector3("Pos1", targetObject.transform.position);
+           
         }
         else
         {

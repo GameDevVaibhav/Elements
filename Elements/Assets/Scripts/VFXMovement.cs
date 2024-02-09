@@ -42,8 +42,7 @@ public class VFXMovement : MonoBehaviour
 
     void MoveTowardsTarget()
     {
-        Vector3 direction = (target.position - transform.position).normalized;
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
     IEnumerator MoveUp()

@@ -13,7 +13,7 @@ public class VFX_Player_Lightning : BaseVFX
     public GameObject Spin_KickVFX;
     
     public GameObject ultimateThrowVFX;
-    
+    public GameObject powerPunchVFX;
     
     public GameObject crossSlashVFX;
     public GameObject powerHitVFX;
@@ -55,9 +55,11 @@ public class VFX_Player_Lightning : BaseVFX
             case "Spin_Kick":
                 StartCoroutine(SpawnVFXWithDelay(Spin_KickVFX, 0.9f, new Vector3(0f, 0f, 0f)));
                 break;
-            
-                
-                
+            case "Power_Punch":
+                StartCoroutine(SpawnVFXWithDelay(powerPunchVFX, 0.9f, new Vector3(-1f, 1f, 0f)));
+                break;
+
+
             case "Ultimate_Throw":
                 StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(0f, -2.5f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(ultimateThrowVFX, 2f, new Vector3(-4f, 0f, 0f)));

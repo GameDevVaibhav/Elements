@@ -188,13 +188,13 @@ VisualEffect:
       - m_Value: {x: -9.91, y: -7.4, z: 0}
         m_Name: Pos1
         m_Overridden: 1
-      - m_Value: {x: -2, y: -0.04, z: 0}
+      - m_Value: {x: 2, y: -0.04, z: 0}
         m_Name: Pos2
         m_Overridden: 1
-      - m_Value: {x: 5.76, y: 8.44, z: 0}
+      - m_Value: {x: -5.76, y: 8.44, z: 0}
         m_Name: Pos3
         m_Overridden: 1
-      - m_Value: {x: 13.32, y: 16.2, z: 0}
+      - m_Value: {x: -13.32, y: 16.2, z: 0}
         m_Name: Pos4
         m_Overridden: 1
     m_Vector4f:
@@ -666,13 +666,13 @@ VisualEffect:
       - m_Value: {x: -11, y: -7.4, z: 0}
         m_Name: Pos1
         m_Overridden: 1
-      - m_Value: {x: -2, y: -0.04, z: 0}
+      - m_Value: {x: 2, y: -0.04, z: 0}
         m_Name: Pos2
         m_Overridden: 1
-      - m_Value: {x: 5.76, y: 8.44, z: 0}
+      - m_Value: {x: -5.76, y: 8.44, z: 0}
         m_Name: Pos3
         m_Overridden: 1
-      - m_Value: {x: 12.88, y: 15.84, z: 0}
+      - m_Value: {x: -12.88, y: 15.84, z: 0}
         m_Name: Pos4
         m_Overridden: 1
     m_Vector4f:
@@ -954,13 +954,13 @@ VisualEffect:
       - m_Value: {x: -12.5, y: -7.2, z: 0}
         m_Name: Pos1
         m_Overridden: 1
-      - m_Value: {x: -2, y: -0.04, z: 0}
+      - m_Value: {x: 2, y: -0.04, z: 0}
         m_Name: Pos2
         m_Overridden: 1
-      - m_Value: {x: 5.76, y: 8.44, z: 0}
+      - m_Value: {x: -5.76, y: 8.44, z: 0}
         m_Name: Pos3
         m_Overridden: 1
-      - m_Value: {x: 13.96, y: 16.2, z: 0}
+      - m_Value: {x: -13.96, y: 16.2, z: 0}
         m_Name: Pos4
         m_Overridden: 1
     m_Vector4f:

@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801478462298533413}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -284,3 +284,4 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 5870620260078445116, guid: 5ddddc8bd858c2049bcdca6dbe7454ec, type: 3}
   arrowThrowVFX: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
   arrowVFX: {fileID: 3824398551635068440, guid: c8bfa37a6d3064640b6107519f6c8b38, type: 3}
+  player: {fileID: 0}

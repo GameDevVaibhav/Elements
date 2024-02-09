@@ -54,6 +54,7 @@ MonoBehaviour:
   topBottomThrowVFX: {fileID: 947666955498455946, guid: bb2f0f4dcb5125a448210482ef71b98d, type: 3}
   Spin_KickVFX: {fileID: 1688006569435356956, guid: 205661695e5fb47488d279fb6e1d1e3b, type: 3}
   ultimateThrowVFX: {fileID: 947666955498455946, guid: bb2f0f4dcb5125a448210482ef71b98d, type: 3}
+  powerPunchVFX: {fileID: 7910486248873608179, guid: a3d34576ced8983459a887fc76ff773c, type: 3}
   crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}
   powerHitVFX: {fileID: 541977385707056074, guid: d50c1a4814285d549a740751b2a66103, type: 3}
   lightningTarget: {fileID: 0}

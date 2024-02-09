@@ -14,14 +14,30 @@ public class Combat : MonoBehaviour
     {
         // Get the Animator component.
         animator = GetComponent<Animator>();
-        
+       // vfx=GetComponent<BaseVFX>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Controls();
+       
+    }
+
+    // Method to start combat action and prevent multiple triggers
+    private void StartCombatAction(string triggerName)
+    {
+       
+
+        // Trigger the combat action animation
+        animator.SetTrigger(triggerName);
+        vfx.HandleVFX(triggerName);
+
         
-        
+    }
+    private void Controls()
+    {
         if (animator.GetBool("isJumping"))
         {
             // Add any logic you want to perform while jumping
@@ -49,10 +65,10 @@ public class Combat : MonoBehaviour
                     StartCombatAction("Power_Hit");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Q)&&!Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKey(KeyCode.LeftShift))
                 {
                     StartCombatAction("Long_Power_Hit");
-                   
+
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
@@ -130,18 +146,6 @@ public class Combat : MonoBehaviour
 
 
         }
-    }
-
-    // Method to start combat action and prevent multiple triggers
-    private void StartCombatAction(string triggerName)
-    {
-       
-
-        // Trigger the combat action animation
-        animator.SetTrigger(triggerName);
-        vfx.HandleVFX(triggerName);
-
-        
     }
 
     private bool IsCurrentAnimation(string animationName)

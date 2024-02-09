@@ -25,9 +25,10 @@ public class BaseVFX : MonoBehaviour
     protected IEnumerator SpawnVFXWithDelay(GameObject vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);
-
+        Vector3 localOffset=transform.TransformDirection(offset);
+        Debug.Log(localOffset);
         // Instantiate the VFX at the position of the VFXSpawnner object
-        GameObject spawnedVfx = Instantiate(vfxPrefab, transform.position + offset, Quaternion.identity);
+        GameObject spawnedVfx = Instantiate(vfxPrefab, transform.position + localOffset, transform.rotation);
 
     }
 }
