@@ -8,38 +8,41 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     private bool isGrounded;
     private Animator animator;
-    SpriteRenderer r;
-    BoxCollider2D collider;
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D collider;
+
+    // Reference to the opponent
+     GameObject opponent;
 
     void Start()
     {
         // Get the Animator component.
         animator = GetComponent<Animator>();
-        r = GetComponent<SpriteRenderer>();
-        collider= GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<BoxCollider2D>();
+        opponent = GameObject.FindGameObjectWithTag("Opponent");
     }
 
     void Update()
     {
-
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
-        
 
         if (Input.GetButtonDown("Jump") && isGrounded && IsCurrentAnimation("Idle"))
         {
             Jump();
-            
         }
-        // 
-        
-       
-        Vector2 S = r.sprite.bounds.size;
-        collider.size = S;
-        collider.offset= Vector2.zero;  
-        
 
+        // Set player's rotation based on opponent's position
+       
+        {
+            FlipTowardsOpponent();
+        }
+
+        Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
+        collider.size = spriteSize;
+        collider.offset = Vector2.zero;
     }
 
     void Jump()
@@ -54,6 +57,24 @@ public class PlayerController : MonoBehaviour
     private bool IsCurrentAnimation(string animationName)
     {
         return animator.GetCurrentAnimatorStateInfo(0).IsName(animationName);
+    }
+
+    void FlipTowardsOpponent()
+    {
+        float playerX = transform.position.x;
+        float opponentX = opponent.transform.position.x;
+
+        if (playerX < opponentX)
+        {
+            Debug.Log("look left");
+            // Opponent is on the right side, flip the player
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        else
+        {
+            // Opponent is on the left side, flip the player
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
     }
 
     public void OnGround()
