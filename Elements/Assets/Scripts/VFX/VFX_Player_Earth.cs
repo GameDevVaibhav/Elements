@@ -19,7 +19,7 @@ public class VFX_Player_Earth : BaseVFX
     public GameObject longPowerHitSlashVFX;
     public GameObject powerHitVFX;
 
-    public Transform target;
+    private Transform target;
 
 
     // Override the Start method if needed for specific initialization
@@ -30,7 +30,7 @@ public class VFX_Player_Earth : BaseVFX
         GameObject targetObject=GameObject.FindGameObjectWithTag("Opponent");
 
         target = targetObject.transform;
-        // Additional initialization for Player_Fire type
+        Debug.Log("opponent" + target.position);
     }
 
     public override void HandleVFX(string combatAction)
@@ -78,7 +78,7 @@ public class VFX_Player_Earth : BaseVFX
                 break;
             
             case "Power_Hit":
-                StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(target.position.x, 0f, target.position.z)));
+                StartCoroutine(SpawnVFXWithDelay(powerHitVFX, 1.1f, new Vector3(target.position.x, -4.42f, 0f)));
                 break;
             default:
                 base.HandleVFX(combatAction);

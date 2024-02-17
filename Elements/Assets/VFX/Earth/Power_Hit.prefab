@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2136385111597449629}
   m_Layer: 0
   m_Name: Power_Hit
-  m_TagString: Untagged
+  m_TagString: rock_power_hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

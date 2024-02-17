@@ -16,6 +16,7 @@ TagManager:
   - LightningCross
   - Player_Lightning
   - Player_Earth
+  - rock_power_hit
   layers:
   - Default
   - TransparentFX

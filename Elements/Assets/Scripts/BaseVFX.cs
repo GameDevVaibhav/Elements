@@ -26,9 +26,16 @@ public class BaseVFX : MonoBehaviour
     {
         yield return new WaitForSeconds(delayDuration);
         Vector3 localOffset=transform.TransformDirection(offset);
-        Debug.Log(localOffset);
-        // Instantiate the VFX at the position of the VFXSpawnner object
-        GameObject spawnedVfx = Instantiate(vfxPrefab, transform.position + localOffset, transform.rotation);
+        GameObject spawnedVfx;
+        if (vfxPrefab.CompareTag("rock_power_hit"))
+        {
+            spawnedVfx = Instantiate(vfxPrefab, offset, transform.rotation);
+        }
+        else
+        {
+
+            spawnedVfx = Instantiate(vfxPrefab, transform.position + localOffset, transform.rotation);
+        }
 
     }
 }

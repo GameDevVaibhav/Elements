@@ -61,20 +61,31 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.S))
                 {
-                    // Trigger the power hit animation.
-                    StartCombatAction("Power_Hit");
+                    if (gameObject.CompareTag("Player_Lightning") || gameObject.CompareTag("Player_Earth"))
+                    {
+                        StartCombatAction("Power_Hit");
+                    }
+                        
                 }
 
                 if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKey(KeyCode.LeftShift))
                 {
-                    StartCombatAction("Long_Power_Hit");
+                    if(!gameObject.CompareTag("Player_Lightning") && !gameObject.CompareTag("Player_Earth"))
+                    {
+                        StartCombatAction("Long_Power_Hit");
+                    }
+                    
 
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
                 {
-                    // Trigger the power punch animation.
-                    StartCombatAction("Power_Punch");
+                    if (gameObject.CompareTag("Player_Lightning"))
+                    {
+                        StartCombatAction("Power_Punch");
+                    }
+                    else { return; }
+                    
                 }
 
                 if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.L))
@@ -85,14 +96,17 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.L))
                 {
-                    // Trigger the front slash animation.
+                    
                     StartCombatAction("Front_Slash");
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Q))
                 {
-                    // Trigger the cross slash animation.
-                    StartCombatAction("Cross_Slash");
+                    if (gameObject.CompareTag("Player_Lightning"))
+                    {
+                        StartCombatAction("Cross_Slash");
+                    }
+                        
                 }
 
                 if (Input.GetKeyDown(KeyCode.X))
@@ -103,7 +117,10 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    // Trigger the rock hit animation.
+                    if (gameObject.CompareTag("Player_Lightning"))
+                    {
+                        return;
+                    }
                     StartCombatAction("Rock_Hit");
                 }
 
@@ -133,8 +150,14 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    // Trigger the arrow throw animation.
-                    StartCombatAction("Arrow_Throw");
+                    if (!gameObject.CompareTag("Player_Lightning") && !gameObject.CompareTag("Player_Earth"))
+                    {
+                        StartCombatAction("Arrow_Throw");
+                    }
+                    else
+                    {
+                        
+                    }
                 }
 
                 if (Input.GetKey(KeyCode.LeftControl))
