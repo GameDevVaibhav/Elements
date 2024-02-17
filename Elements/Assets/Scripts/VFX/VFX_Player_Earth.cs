@@ -73,7 +73,7 @@ public class VFX_Player_Earth : BaseVFX
                
                 break;
             case "Long_Power_Hit":
-                StartCoroutine(SpawnVFXWithDelay(longPowerHitVFX, 0.3f, new Vector3(0f, 0f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(longPowerHitVFX, 0.3f, new Vector3(-1f, 0f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(longPowerHitSlashVFX, 1.3f, new Vector3(0f, 0f, 0f)));
                 break;
             

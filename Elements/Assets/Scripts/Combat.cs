@@ -70,7 +70,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKey(KeyCode.LeftShift))
                 {
-                    if(!gameObject.CompareTag("Player_Lightning") && !gameObject.CompareTag("Player_Earth"))
+                    if(!gameObject.CompareTag("Player_Lightning") )
                     {
                         StartCombatAction("Long_Power_Hit");
                     }
