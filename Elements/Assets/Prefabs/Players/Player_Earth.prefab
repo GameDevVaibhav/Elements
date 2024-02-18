@@ -284,4 +284,3 @@ MonoBehaviour:
   longPowerHitVFX: {fileID: 4024331558296814193, guid: a354e7012ab03024c940e38c5e861ff1, type: 3}
   longPowerHitSlashVFX: {fileID: 2126995372899371129, guid: 5cc57f7a258f31d4c9e257e193c8cbcf, type: 3}
   powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
-  target: {fileID: 0}

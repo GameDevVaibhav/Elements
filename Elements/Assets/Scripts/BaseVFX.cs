@@ -7,7 +7,7 @@ public class BaseVFX : MonoBehaviour
     
     public GameObject defaultVFX;
      public GameObject playerType;
-
+    
     
     protected Combat combat;
 
@@ -27,6 +27,9 @@ public class BaseVFX : MonoBehaviour
         yield return new WaitForSeconds(delayDuration);
         Vector3 localOffset=transform.TransformDirection(offset);
         GameObject spawnedVfx;
+
+        
+
         if (vfxPrefab.CompareTag("rock_power_hit"))
         {
             spawnedVfx = Instantiate(vfxPrefab, offset, transform.rotation);
@@ -35,6 +38,13 @@ public class BaseVFX : MonoBehaviour
         {
 
             spawnedVfx = Instantiate(vfxPrefab, transform.position + localOffset, transform.rotation);
+            //AttackRange attackRange = spawnedVfx.GetComponent<AttackRange>();
+            //if (attackRange != null)
+            //{
+            //    Debug.Log("found attack");
+            //    attackRange.CheckForOpponentHits();
+            //}
+            
         }
 
     }

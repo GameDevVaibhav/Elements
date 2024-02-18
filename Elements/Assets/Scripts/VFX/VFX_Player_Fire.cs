@@ -29,6 +29,7 @@ public class VFX_Player_Fire : BaseVFX
 
     public override void HandleVFX(string combatAction)
     {
+        
         switch (combatAction)
         {
             case "Tackle":
@@ -78,6 +79,12 @@ public class VFX_Player_Fire : BaseVFX
             default:
                 base.HandleVFX(combatAction);
                 break;
+
         }
+
+       
+
+
     }
+   
 }

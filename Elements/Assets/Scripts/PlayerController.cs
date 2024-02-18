@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     // Reference to the opponent
      GameObject opponent;
+    
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
         opponent = GameObject.FindGameObjectWithTag("Opponent");
+        
     }
 
     void Update()

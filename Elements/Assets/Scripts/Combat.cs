@@ -8,13 +8,15 @@ public class Combat : MonoBehaviour
     public BaseVFX vfx;
 
     CombatMovement combatMovement;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the Animator component.
         animator = GetComponent<Animator>();
-       // vfx=GetComponent<BaseVFX>();
+        // vfx=GetComponent<BaseVFX>();
+        
     }
 
     // Update is called once per frame
@@ -28,11 +30,12 @@ public class Combat : MonoBehaviour
     // Method to start combat action and prevent multiple triggers
     private void StartCombatAction(string triggerName)
     {
-       
 
+        
         // Trigger the combat action animation
         animator.SetTrigger(triggerName);
         vfx.HandleVFX(triggerName);
+        
 
         
     }
