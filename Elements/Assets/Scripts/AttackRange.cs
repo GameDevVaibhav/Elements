@@ -15,12 +15,9 @@ public class AttackRange : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         player = FindObjectOfType<PlayerController>().transform;
         float rotationY = player.rotation.eulerAngles.y;
-        if (rotationY != 0f)
-        {
-            
-            offset.x = -offset.x;
-        }
+
         circleCollider.offset=  new Vector2(offset.x,offset.y);
+
         Debug.Log(circleCollider.offset);
     }
     void OnDrawGizmos()

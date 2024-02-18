@@ -89,7 +89,9 @@ public class VFXMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Opponent"))
         {
+            Debug.Log("Hit Registered");
             Destroy(gameObject);
+            
         }
     }
 }
