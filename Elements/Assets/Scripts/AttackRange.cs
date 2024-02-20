@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class AttackRange : MonoBehaviour
 {
@@ -30,19 +31,18 @@ public class AttackRange : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Opponent"))
+        PhotonView photonView = other.GetComponent<PhotonView>();
+
+        if (photonView != null && photonView.IsMine)
+        {
+            // The collision is with the local player, do nothing.
+        }
+        else if (other.CompareTag("Player_Fire"))
         {
             Debug.Log("Opponent entered the attack range");
-            // Add logic for applying damage or any other action.
+            // Add logic for applying damage or any other action for remote players.
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Opponent"))
-        {
-            Debug.Log("Opponent exited the attack range");
-            // Add logic for stopping damage or any other action.
-        }
-    }
+  
 }

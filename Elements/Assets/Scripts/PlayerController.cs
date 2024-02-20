@@ -1,3 +1,5 @@
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     // Reference to the opponent
      GameObject opponent;
-    
+    bool opponentFound = false;
 
     void Start()
     {
@@ -21,12 +23,16 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
-        opponent = GameObject.FindGameObjectWithTag("Opponent");
         
     }
 
     void Update()
     {
+        if (!opponentFound)
+        {
+            FindOpponent();
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
@@ -61,21 +67,47 @@ public class PlayerController : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName(animationName);
     }
 
+    void FindOpponent()
+    {
+        // Find all objects with the "Player_Fire" tag
+        GameObject[] playerFireObjects = GameObject.FindGameObjectsWithTag("Player_Fire");
+
+        // Find the opponent with isMine set to false
+        foreach (GameObject playerFireObject in playerFireObjects)
+        {
+            PhotonView opponentPhotonView = playerFireObject.GetComponent<PhotonView>();
+
+            if (opponentPhotonView != null && !opponentPhotonView.IsMine)
+            {
+                opponent = playerFireObject;
+                opponentFound = true; // Set the flag to true once the correct opponent is found
+                break; // Stop searching once the correct opponent is found
+            }
+        }
+    }
     void FlipTowardsOpponent()
     {
-        float playerX = transform.position.x;
-        float opponentX = opponent.transform.position.x;
+        if (opponent != null)
+        {
+            PhotonView opponentPhotonView = opponent.GetComponent<PhotonView>();
 
-        if (playerX < opponentX)
-        {
-            Debug.Log("look left");
-            // Opponent is on the right side, flip the player
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        }
-        else
-        {
-            // Opponent is on the left side, flip the player
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            if (opponentPhotonView != null && !opponentPhotonView.IsMine)
+            {
+                // Opponent is not the local player, flip the player to face the opponent
+                float playerX = transform.position.x;
+                float opponentX = opponent.transform.position.x;
+
+                if (playerX < opponentX)
+                {
+                    // Opponent is on the right side, flip the player
+                    transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                }
+                else
+                {
+                    // Opponent is on the left side, flip the player
+                    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                }
+            }
         }
     }
 

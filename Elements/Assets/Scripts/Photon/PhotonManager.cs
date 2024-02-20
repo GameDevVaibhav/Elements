@@ -14,7 +14,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void OnConnectedToMaster()
@@ -24,12 +24,18 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        PhotonNetwork.JoinOrCreateRoom("Room",new RoomOptions { MaxPlayers = 2 },TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("Room", new RoomOptions { MaxPlayers = 2 }, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.Instantiate("Player_Fire",new Vector2(0f,0f),Quaternion.identity);
-        
+        // Set the nickname for the local player based on view ID
+        PhotonNetwork.NickName = "Player" + PhotonNetwork.LocalPlayer.ActorNumber;
+
+        // Instantiate the player with the specified nickname
+        GameObject player = PhotonNetwork.Instantiate("Player_Fire", new Vector2(0f, 0f), Quaternion.identity);
+
+        // You may also want to customize the player's nickname locally for display purposes
+        player.GetComponent<PhotonView>().Owner.NickName = PhotonNetwork.NickName;
     }
 }

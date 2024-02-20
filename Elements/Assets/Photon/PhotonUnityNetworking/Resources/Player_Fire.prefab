@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PositionModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
     InterpolateOption: 2
@@ -277,8 +277,8 @@ MonoBehaviour:
     ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
   m_RotationModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 1
+    SynchronizeEnabled: 1
+    InterpolateOption: 0
     InterpolateRotateTowardsSpeed: 180
     InterpolateLerpSpeed: 5
   m_ScaleModel:
@@ -317,6 +317,8 @@ MonoBehaviour:
   scriptsToIgnore:
   - {fileID: 2859135654467011398}
   - {fileID: 4199297458742836845}
+  - {fileID: 2265596111214831886}
+  - {fileID: 2239761786718333165}
 --- !u!1 &1801478462298533413
 GameObject:
   m_ObjectHideFlags: 0

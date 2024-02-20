@@ -6,7 +6,7 @@ using Photon.Pun;
 public class PlayerNetworking : MonoBehaviour
 {
     public MonoBehaviour[] scriptsToIgnore;
-
+    
     private PhotonView photonView;
     void Start()
     {
