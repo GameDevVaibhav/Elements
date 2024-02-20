@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class BaseVFX : MonoBehaviour
 {
     
-    public GameObject defaultVFX;
+    public string defaultVFX;
      public GameObject playerType;
     
     
@@ -22,7 +23,7 @@ public class BaseVFX : MonoBehaviour
         StartCoroutine(SpawnVFXWithDelay(defaultVFX, 0.5f, Vector3.zero));
     }
 
-    protected IEnumerator SpawnVFXWithDelay(GameObject vfxPrefab, float delayDuration, Vector3 offset)
+    protected IEnumerator SpawnVFXWithDelay(string vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);
         Vector3 localOffset=transform.TransformDirection(offset);
@@ -30,20 +31,15 @@ public class BaseVFX : MonoBehaviour
 
         
 
-        if (vfxPrefab.CompareTag("rock_power_hit"))
+        if (vfxPrefab=="Power_Hit")
         {
-            spawnedVfx = Instantiate(vfxPrefab, offset, transform.rotation);
+            spawnedVfx = PhotonNetwork.Instantiate("VFX/"+vfxPrefab, offset, transform.rotation);
         }
         else
         {
 
-            spawnedVfx = Instantiate(vfxPrefab, transform.position + localOffset, transform.rotation);
-            //AttackRange attackRange = spawnedVfx.GetComponent<AttackRange>();
-            //if (attackRange != null)
-            //{
-            //    Debug.Log("found attack");
-            //    attackRange.CheckForOpponentHits();
-            //}
+            spawnedVfx = PhotonNetwork.Instantiate("VFX/"+vfxPrefab, transform.position + localOffset, transform.rotation);
+            
             
         }
 

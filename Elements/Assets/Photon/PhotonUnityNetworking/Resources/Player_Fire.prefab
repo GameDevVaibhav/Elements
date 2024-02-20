@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8211223405838309574}
   - component: {fileID: 1687891342416222806}
   - component: {fileID: 4199297458742836845}
+  - component: {fileID: 5448145736347259831}
   m_Layer: 0
   m_Name: Player_Fire
   m_TagString: Player_Fire
@@ -250,6 +251,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 8211223405838309574}
   - {fileID: 1687891342416222806}
+  - {fileID: 5448145736347259831}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -317,8 +319,77 @@ MonoBehaviour:
   scriptsToIgnore:
   - {fileID: 2859135654467011398}
   - {fileID: 4199297458742836845}
-  - {fileID: 2265596111214831886}
+  - {fileID: 0}
   - {fileID: 2239761786718333165}
+--- !u!114 &5448145736347259831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56983741170945444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: isJumping
+  - Type: 9
+    SynchronizeType: 2
+    Name: Punch
+  - Type: 9
+    SynchronizeType: 2
+    Name: Kick
+  - Type: 9
+    SynchronizeType: 2
+    Name: Power_Punch
+  - Type: 9
+    SynchronizeType: 2
+    Name: Tackle
+  - Type: 9
+    SynchronizeType: 1
+    Name: Upper_Slash
+  - Type: 9
+    SynchronizeType: 2
+    Name: Front_Slash
+  - Type: 9
+    SynchronizeType: 2
+    Name: Cross_Slash
+  - Type: 9
+    SynchronizeType: 2
+    Name: Smash
+  - Type: 9
+    SynchronizeType: 2
+    Name: Rock_Hit
+  - Type: 9
+    SynchronizeType: 2
+    Name: Power_Hit
+  - Type: 9
+    SynchronizeType: 2
+    Name: Ultimate_Throw
+  - Type: 9
+    SynchronizeType: 2
+    Name: Spin_Kick
+  - Type: 9
+    SynchronizeType: 2
+    Name: Top-Bottom_Throw
+  - Type: 9
+    SynchronizeType: 2
+    Name: Arrow_Throw
+  - Type: 9
+    SynchronizeType: 2
+    Name: Clear
+  - Type: 9
+    SynchronizeType: 2
+    Name: Long_Power_Hit
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &1801478462298533413
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe6457b52bde8245bdf1bad7c3f96a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVFX: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
+  defaultVFX: 
   playerType: {fileID: 56983741170945444}
   tackleVFX: {fileID: 1238863954929083236, guid: 49052010bc5c6e242ac8ad914a2d8889, type: 3}
   upperSlashVFX: {fileID: 3051007112789763784, guid: 7bb9af77239eace4aa0b83b3396170b2, type: 3}
@@ -379,3 +450,4 @@ MonoBehaviour:
   arrowThrowVFX: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
   arrowVFX: {fileID: 3824398551635068440, guid: c8bfa37a6d3064640b6107519f6c8b38, type: 3}
   player: {fileID: 0}
+  fire: Fire

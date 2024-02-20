@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Combat : MonoBehaviour
 {
@@ -8,11 +9,12 @@ public class Combat : MonoBehaviour
     public BaseVFX vfx;
 
     CombatMovement combatMovement;
-   
+    PhotonView PV;
 
     // Start is called before the first frame update
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         // Get the Animator component.
         animator = GetComponent<Animator>();
         // vfx=GetComponent<BaseVFX>();
@@ -22,7 +24,10 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (!PV.IsMine)
+        {
+            return;
+        }
         Controls();
        
     }
