@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2859135654467011398}
   - component: {fileID: 2265596111214831886}
   - component: {fileID: 2239761786718333165}
+  - component: {fileID: -8579356151012724403}
   - component: {fileID: 8767394514995061758}
   - component: {fileID: 2379312998788550685}
   - component: {fileID: 8043955476297019962}
@@ -85,6 +86,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 5
   forwardDistance: 2
+--- !u!114 &-8579356151012724403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56983741170945444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15c7dc365379764ab3afba40dce6e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 100
 --- !u!212 &8767394514995061758
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -245,7 +260,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
@@ -319,8 +334,9 @@ MonoBehaviour:
   scriptsToIgnore:
   - {fileID: 2859135654467011398}
   - {fileID: 4199297458742836845}
-  - {fileID: 0}
+  - {fileID: 2265596111214831886}
   - {fileID: 2239761786718333165}
+  - {fileID: -8579356151012724403}
 --- !u!114 &5448145736347259831
 MonoBehaviour:
   m_ObjectHideFlags: 0

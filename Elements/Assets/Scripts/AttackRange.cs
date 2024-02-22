@@ -21,28 +21,9 @@ public class AttackRange : MonoBehaviour
 
         Debug.Log(circleCollider.offset);
     }
-    void OnDrawGizmos()
-    {
+  
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position+offset, range);
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        PhotonView photonView = other.GetComponent<PhotonView>();
-
-        if (photonView != null && photonView.IsMine)
-        {
-            // The collision is with the local player, do nothing.
-        }
-        else if (other.CompareTag("Player_Fire"))
-        {
-            Debug.Log("Opponent entered the attack range");
-            // Add logic for applying damage or any other action for remote players.
-        }
-    }
+   
 
   
 }

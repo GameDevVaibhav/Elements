@@ -23,6 +23,9 @@ public class BaseVFX : MonoBehaviour
         StartCoroutine(SpawnVFXWithDelay(defaultVFX, 0.5f, Vector3.zero));
     }
 
+
+
+
     protected IEnumerator SpawnVFXWithDelay(string vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);
@@ -40,8 +43,16 @@ public class BaseVFX : MonoBehaviour
 
             spawnedVfx = PhotonNetwork.Instantiate("VFX/"+vfxPrefab, transform.position + localOffset, transform.rotation);
             
-            
+
         }
 
+       
+
     }
+
+
+
+
+
+
 }
