@@ -8,7 +8,8 @@ public class VfxDamageHandler : MonoBehaviour
     PhotonView vfxPV;
     string vfxOwner;
 
-    Player_Health playerHealth;
+    [SerializeField]
+    float vfxDamage;
     private void Start()
     {
         vfxPV = GetComponent<PhotonView>();
@@ -19,7 +20,7 @@ public class VfxDamageHandler : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D player)
     {
         PhotonView playerPV = player.GetComponent<PhotonView>();
-        playerHealth=player.GetComponent<Player_Health>();
+        
         string playerName=playerPV.Owner.ToString();
 
         if (playerName=="#02 'Player2'")
@@ -27,7 +28,7 @@ public class VfxDamageHandler : MonoBehaviour
             if (vfxOwner == "#01 'Player1'")
             {
                 Debug.Log("Player1 attacked player 2");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName);
+                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage);
             }
             
 
@@ -37,7 +38,7 @@ public class VfxDamageHandler : MonoBehaviour
             if (vfxOwner == "#02 'Player2'")
             {
                 Debug.Log("Player2 attacked player 1");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName);
+                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage);
             }
            
         }

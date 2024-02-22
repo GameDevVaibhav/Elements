@@ -14633,6 +14633,9 @@ GameObject:
   - component: {fileID: 8434428928516505331}
   - component: {fileID: 5037110997352848568}
   - component: {fileID: 3666687363771522180}
+  - component: {fileID: 2544954641102476124}
+  - component: {fileID: 8623921756532650807}
+  - component: {fileID: -7926584417631449807}
   m_Layer: 0
   m_Name: Long_PowerHit_Slash
   m_TagString: Untagged
@@ -19475,6 +19478,68 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &2544954641102476124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870620260078445116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1387c99b55f61784c94aa433832558ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  offset: {x: 1, y: -1, z: 0}
+--- !u!58 &8623921756532650807
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870620260078445116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 6
+--- !u!114 &-7926584417631449807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870620260078445116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 23
 --- !u!1 &5925052434671182211
 GameObject:
   m_ObjectHideFlags: 0

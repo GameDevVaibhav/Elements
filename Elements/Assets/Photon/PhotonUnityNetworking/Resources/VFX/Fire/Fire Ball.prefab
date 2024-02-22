@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6144966002624205652}
   - component: {fileID: -2214168623086704076}
   - component: {fileID: -8061692194056605336}
+  - component: {fileID: -826847766765200503}
   m_Layer: 0
   m_Name: Fire Ball
   m_TagString: Untagged
@@ -4947,6 +4948,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-826847766765200503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152147058953754064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 30
 --- !u!1 &1274392088412118397
 GameObject:
   m_ObjectHideFlags: 0

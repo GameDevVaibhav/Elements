@@ -16,11 +16,11 @@ public class Player_Health : MonoBehaviour
     }
 
     [PunRPC]
-    public void TakeDamageRPC(string player)
+    public void TakeDamageRPC(string player,float damage)
     {
         if (player == photonView.Owner.ToString())
         {
-            currentHealth -= 30;
+            currentHealth -= damage;
             Debug.Log(player + " Took Damage");
         } 
     }

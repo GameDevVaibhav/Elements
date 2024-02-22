@@ -14635,6 +14635,7 @@ GameObject:
   - component: {fileID: 5785618962269131419}
   - component: {fileID: 3483299898040722673}
   - component: {fileID: -2539454503340289306}
+  - component: {fileID: 852505152421224483}
   m_Layer: 0
   m_Name: Spin_Kick
   m_TagString: Untagged
@@ -19526,6 +19527,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &852505152421224483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870620260078445116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 20
 --- !u!1 &5925052434671182211
 GameObject:
   m_ObjectHideFlags: 0
