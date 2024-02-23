@@ -21,7 +21,7 @@ public class Player_Health : MonoBehaviour
         if (player == photonView.Owner.ToString())
         {
             currentHealth -= damage;
-            Debug.Log(player + " Took Damage");
+            Debug.Log(player + " Took Damage "+damage);
         } 
     }
 

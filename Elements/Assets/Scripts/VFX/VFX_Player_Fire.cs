@@ -56,7 +56,7 @@ public class VFX_Player_Fire : BaseVFX
                 StartCoroutine(SpawnVFXWithDelay(fire + "/" + Spin_KickVFX.name, 0.9f, new Vector3(0f, 0f, 0f)));
                 break;
             case "Rock_Hit":
-                StartCoroutine(SpawnVFXWithDelay(fire + "/" + Rock_HitVFX.name, 0.7f, new Vector3(-3f, -2.5f, 0f)));
+                StartCoroutine(SpawnVFXWithDelay(fire + "/" + Rock_HitVFX.name, 0.7f, new Vector3(-5f, -2.5f, 0f)));
                 break;
             case "Ultimate_Throw":
                 StartCoroutine(SpawnVFXWithDelay(fire + "/" + ultimateThrowVFX.name, 0.7f, new Vector3(-3f, -2.5f, 0f)));

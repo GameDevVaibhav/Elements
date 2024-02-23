@@ -25,10 +25,12 @@ public class VfxDamageHandler : MonoBehaviour
 
         if (playerName=="#02 'Player2'")
         {
+
             if (vfxOwner == "#01 'Player1'")
             {
                 Debug.Log("Player1 attacked player 2");
                 playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage);
+
             }
             
 
@@ -44,4 +46,6 @@ public class VfxDamageHandler : MonoBehaviour
         }
         
     }
+
+    
 }

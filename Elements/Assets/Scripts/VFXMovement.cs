@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class VFXMovement : MonoBehaviour
 {
@@ -13,10 +14,20 @@ public class VFXMovement : MonoBehaviour
     private Transform target;
     private bool hasMovedUp = false;
     public float time;
-     
+
+    PhotonView vfxPV;
+    PlayerController[] players;
+    string vfxOwner;
+    [SerializeField]
+    float damage;
 
     void Start()
     {
+        vfxPV = GetComponent<PhotonView>();
+        vfxOwner = vfxPV.Owner.ToString();
+
+        players= FindObjectsOfType<PlayerController>();
+
         FindTarget();
         
     }
@@ -32,12 +43,30 @@ public class VFXMovement : MonoBehaviour
 
     void FindTarget()
     {
-        GameObject targetObject = GameObject.FindGameObjectWithTag(targetTag);
-        if (targetObject != null)
+        
+        
+        
+        foreach (PlayerController player in players)
         {
-            Debug.Log("found");
-            target = targetObject.transform;
+            PhotonView playerPV = player.GetComponent<PhotonView>();
+            if(vfxOwner== "#02 'Player2'")
+            {
+                if(playerPV.Owner.ToString()== "#01 'Player1'")
+                {
+                    target = player.transform;
+                }
+            }
+            else if (vfxOwner == "#01 'Player1'")
+            {
+                if (playerPV.Owner.ToString() == "#02 'Player2'")
+                {
+                    target = player.transform;
+                }
+            }
         }
+        
+
+        
     }
 
     void MoveTowardsTarget()
@@ -87,11 +116,31 @@ public class VFXMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Opponent"))
+
+        PhotonView playerPV = collision.gameObject.GetComponent<PhotonView>();
+        string playerName = playerPV.Owner.ToString();
+
+        if (playerName == "#01 'Player1'")
         {
-            Debug.Log("Hit Registered");
-            Destroy(gameObject);
-            
+            if (vfxOwner == "#02 'Player2'")
+            {
+                Debug.Log("Ball Hit Player1");
+                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                Destroy(gameObject);
+            }
+
+        }
+        else if (playerName == "#02 'Player2'")
+        {
+            if (vfxOwner == "#01 'Player1'")
+            {
+                Debug.Log("Ball Hit Player2");
+                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                Destroy(gameObject);
+            }
+
         }
     }
+
+    
 }
