@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
     void FindOpponent()
     {
         // Find all objects with the "Player_Fire" tag
-        GameObject[] playerFireObjects = GameObject.FindGameObjectsWithTag("Player_Fire");
+        GameObject[] playerFireObjects = GameObject.FindGameObjectsWithTag("Player");
 
         // Find the opponent with isMine set to false
         foreach (GameObject playerFireObject in playerFireObjects)

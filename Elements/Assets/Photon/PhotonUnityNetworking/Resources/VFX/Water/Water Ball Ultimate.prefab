@@ -9747,6 +9747,7 @@ GameObject:
   - component: {fileID: 1579334652539190728}
   - component: {fileID: 7643302022406796069}
   - component: {fileID: 5070911192920417698}
+  - component: {fileID: 7803857440544682222}
   m_Layer: 0
   m_Name: Water Ball Ultimate
   m_TagString: Rock_Hit
@@ -14657,6 +14658,29 @@ MonoBehaviour:
   moveUpDuration: 0.3
   height: 5
   time: 1
+  damage: 7
+--- !u!114 &7803857440544682222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879557844117364332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3116117240273014255
 GameObject:
   m_ObjectHideFlags: 0

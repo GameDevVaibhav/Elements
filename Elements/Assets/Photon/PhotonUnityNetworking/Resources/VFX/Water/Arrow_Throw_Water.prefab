@@ -53796,6 +53796,7 @@ GameObject:
   - component: {fileID: 1675666023774550680}
   - component: {fileID: 5236703191817017960}
   - component: {fileID: 6412439923011235999}
+  - component: {fileID: -2806730108011151978}
   m_Layer: 0
   m_Name: Arrow_Throw_Water
   m_TagString: Untagged
@@ -58616,6 +58617,28 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-2806730108011151978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610956249698390203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7679244545813546230
 GameObject:
   m_ObjectHideFlags: 0

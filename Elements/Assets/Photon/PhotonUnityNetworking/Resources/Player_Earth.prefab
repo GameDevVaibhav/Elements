@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 117382356413520795}
   - component: {fileID: 5824757566688919658}
   - component: {fileID: 7520614372819827134}
+  - component: {fileID: -4112477217153920787}
   m_Layer: 0
   m_Name: Player_Earth
   m_TagString: Player_Earth
@@ -225,6 +226,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4112477217153920787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436672282160183693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7288693446781413516
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d90dc54545a5d43aa8f40d0e5a53db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVFX: {fileID: 0}
+  defaultVFX: 
   playerType: {fileID: 0}
   tackleVFX: {fileID: 8927743822268101615, guid: 4feafcc49059a1e46a9eedd2a3b6fe5b, type: 3}
   upperSlashVFX: {fileID: 5836993572306199879, guid: 57fb177317ff80e4eba9fabdab54f846, type: 3}
@@ -284,3 +307,4 @@ MonoBehaviour:
   longPowerHitVFX: {fileID: 4024331558296814193, guid: a354e7012ab03024c940e38c5e861ff1, type: 3}
   longPowerHitSlashVFX: {fileID: 2126995372899371129, guid: 5cc57f7a258f31d4c9e257e193c8cbcf, type: 3}
   powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
+  earth: Earth

@@ -29316,6 +29316,8 @@ GameObject:
   - component: {fileID: 7041353563580171682}
   - component: {fileID: 5270874384420501502}
   - component: {fileID: 397117623891843256}
+  - component: {fileID: -1249507085887533710}
+  - component: {fileID: -6624570076656676818}
   m_Layer: 0
   m_Name: Tackle_Water
   m_TagString: Untagged
@@ -34185,6 +34187,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 2
   offset: {x: 0, y: -2.5, z: 0}
+--- !u!114 &-1249507085887533710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111499304651949575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-6624570076656676818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111499304651949575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 5
 --- !u!1 &6546147462390881609
 GameObject:
   m_ObjectHideFlags: 0

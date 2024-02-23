@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678bf3a1774066a46813b0f773c97da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVFX: {fileID: 0}
+  defaultVFX: 
   playerType: {fileID: 0}
   tackleVFX: {fileID: 6390222001088453595, guid: 3995698ee95c6254a830683a06b28572, type: 3}
   upperSlashVFX: {fileID: 1326599102873781284, guid: 1128e16d1d0c955449ae5e8775f6f625, type: 3}
@@ -59,6 +59,7 @@ MonoBehaviour:
   powerHitVFX: {fileID: 541977385707056074, guid: d50c1a4814285d549a740751b2a66103, type: 3}
   lightningTarget: {fileID: 0}
   Target: {fileID: 0}
+  light: Lightning
 --- !u!1 &996822007886626883
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,6 +76,7 @@ GameObject:
   - component: {fileID: 8673396700040925376}
   - component: {fileID: 3217850082289795903}
   - component: {fileID: 6866895782382107757}
+  - component: {fileID: -7611519228755667214}
   m_Layer: 0
   m_Name: Player_Lightning
   m_TagString: Player_Lightning
@@ -284,3 +286,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7611519228755667214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996822007886626883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

@@ -24472,6 +24472,7 @@ GameObject:
   - component: {fileID: 7366033460207471755}
   - component: {fileID: 7820820505098755873}
   - component: {fileID: 3987856408815869619}
+  - component: {fileID: -8718033184487681654}
   m_Layer: 0
   m_Name: 'Water Ball '
   m_TagString: Rock_Hit
@@ -29382,6 +29383,29 @@ MonoBehaviour:
   moveUpDuration: 0.09
   height: 1.5
   time: 1
+  damage: 12
+--- !u!114 &-8718033184487681654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482330157396456084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6018547527993907664
 GameObject:
   m_ObjectHideFlags: 0

@@ -9798,6 +9798,8 @@ GameObject:
   - component: {fileID: 3352359501066134238}
   - component: {fileID: 6533920710512677511}
   - component: {fileID: 2752495961278926420}
+  - component: {fileID: 3908912846457299138}
+  - component: {fileID: -4704943219074793074}
   m_Layer: 0
   m_Name: UpperSlash_Water
   m_TagString: Untagged
@@ -14667,6 +14669,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   offset: {x: -1.56, y: 1, z: 0}
+--- !u!114 &3908912846457299138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840577294537927888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-4704943219074793074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840577294537927888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 10
 --- !u!1 &5165339929224978163
 GameObject:
   m_ObjectHideFlags: 0
