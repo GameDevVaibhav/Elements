@@ -4901,6 +4901,8 @@ GameObject:
   - component: {fileID: 4830727480827840522}
   - component: {fileID: 8373892284594128514}
   - component: {fileID: 4252534146268738980}
+  - component: {fileID: 7594277334063651417}
+  - component: {fileID: 5542026742144806904}
   m_Layer: 0
   m_Name: SpinKick_Earth
   m_TagString: Untagged
@@ -9770,6 +9772,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6
+--- !u!114 &7594277334063651417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126995372899371129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5542026742144806904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126995372899371129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 20
 --- !u!1 &5741988425888640071
 GameObject:
   m_ObjectHideFlags: 0

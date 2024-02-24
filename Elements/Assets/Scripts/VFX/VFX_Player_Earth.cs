@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,8 +20,13 @@ public class VFX_Player_Earth : BaseVFX
     public GameObject longPowerHitSlashVFX;
     public GameObject powerHitVFX;
 
-    private Transform target;
+    private Transform targett;
     public string earth = "Earth/";
+
+    
+    
+
+
 
     // Override the Start method if needed for specific initialization
     protected override void Start()
@@ -29,9 +35,14 @@ public class VFX_Player_Earth : BaseVFX
 
         GameObject targetObject=GameObject.FindGameObjectWithTag("Opponent");
 
-        target = targetObject.transform;
-        Debug.Log("opponent" + target.position);
+        //target = targetObject.transform;
+        //Debug.Log("opponent" + target.position);
+
+        
+
     }
+
+   
 
     public override void HandleVFX(string combatAction)
     {
@@ -78,11 +89,15 @@ public class VFX_Player_Earth : BaseVFX
                 break;
             
             case "Power_Hit":
-                StartCoroutine(SpawnVFXWithDelay(earth + "/" + powerHitVFX.name, 1.1f, new Vector3(target.position.x, -4.42f, 0f)));
+                
+                
+                StartCoroutine(SpawnVFXWithDelay(earth + "/" + powerHitVFX.name, 1.1f, new Vector3(0f, -4.42f, 0f)));
                 break;
             default:
                 base.HandleVFX(combatAction);
                 break;
         }
     }
+
+    
 }

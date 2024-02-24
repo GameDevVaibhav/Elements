@@ -11,14 +11,25 @@ public class Combat : MonoBehaviour
     CombatMovement combatMovement;
     PhotonView PV;
 
+    string playerType;
+
+    bool fire, water, lightning, earth=false;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
         // Get the Animator component.
         animator = GetComponent<Animator>();
-        // vfx=GetComponent<BaseVFX>();
-        
+
+        playerType = PlayerPrefs.GetString("SelectedPlayerType", "Player_Fire");
+
+        fire = playerType == "Player_Fire" ? true : false;
+        water = playerType == "Player_Water" ? true : false;
+        lightning= playerType == "Player_Lightning" ? true : false;
+        earth = playerType == "Player_Earth" ? true : false;
+
     }
 
     // Update is called once per frame
@@ -69,7 +80,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.S))
                 {
-                    if (gameObject.CompareTag("Player_Lightning") || gameObject.CompareTag("Player_Earth"))
+                    if (lightning || earth)
                     {
                         StartCombatAction("Power_Hit");
                     }
@@ -78,7 +89,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKey(KeyCode.LeftShift))
                 {
-                    if(!gameObject.CompareTag("Player_Lightning") )
+                    if(!lightning )
                     {
                         StartCombatAction("Long_Power_Hit");
                     }
@@ -88,7 +99,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
                 {
-                    if (gameObject.CompareTag("Player_Lightning"))
+                    if (lightning)
                     {
                         StartCombatAction("Power_Punch");
                     }
@@ -110,7 +121,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Q))
                 {
-                    if (gameObject.CompareTag("Player_Lightning"))
+                    if (lightning)
                     {
                         StartCombatAction("Cross_Slash");
                     }
@@ -125,7 +136,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (gameObject.CompareTag("Player_Lightning"))
+                    if (lightning)
                     {
                         return;
                     }
@@ -158,7 +169,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if (!gameObject.CompareTag("Player_Lightning") && !gameObject.CompareTag("Player_Earth"))
+                    if (!lightning && !earth)
                     {
                         StartCombatAction("Arrow_Throw");
                     }
