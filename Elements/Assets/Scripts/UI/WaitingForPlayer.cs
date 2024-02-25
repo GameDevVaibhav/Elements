@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,9 @@ public class WaitingForPlayer : MonoBehaviour
     public GameObject playUI;
     public GameObject player2;
     private bool hasWaited = false;
+
+    public TextMeshProUGUI player1Name;
+    public TextMeshProUGUI player2Name;
 
     void Start()
     {
