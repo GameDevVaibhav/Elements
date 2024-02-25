@@ -59,11 +59,10 @@ public class VFX_Player_Earth : BaseVFX
                 StartCoroutine(SpawnVFXWithDelay(earth+ "/" + smallRockVFX.name, 1.1f, new Vector3(-3f, 0f, 0f)));
                 break;
             case "Front_Slash":
-                //StartCoroutine(SpawnVFXWithDelay(frontSlashVFX, 0.5f, Vector3.zero));
-                //StartCoroutine(SpawnVFXWithDelay(frontSlash2VFX, 0.9f, Vector3.zero));
-                StartCoroutine(SpawnVFXWithDelay(earth + "/" + smallRockVFX.name, 0.5f, new Vector3(3.5f, 0f, 0f)));
+                
+               // StartCoroutine(SpawnVFXWithDelay(earth + "/" + smallRockVFX.name, 0.5f, new Vector3(3.5f, 0f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(earth + "/" + frontSlashVFX.name, 0.5f, new Vector3(3.5f, -2.5f, 0f)));
-                StartCoroutine(SpawnVFXWithDelay(earth + "/" + smallRockVFX.name, 0.9f, new Vector3(3.5f, 0f, 0f)));
+                //StartCoroutine(SpawnVFXWithDelay(earth + "/" + smallRockVFX.name, 0.9f, new Vector3(3.5f, 0f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(earth + "/" + frontSlash2VFX.name, 0.9f, new Vector3(3.5f, -2.5f, 0f)));
                 break;
             case "Top-Bottom_Throw":

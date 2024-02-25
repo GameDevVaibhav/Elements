@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c0a13c98c86e143bde8d0162609e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Target_L
+  offset: {x: 0, y: -1, z: 0}
 --- !u!114 &7542429212513420452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c0a13c98c86e143bde8d0162609e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Target_M
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &3031420396267332866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +648,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2436237624488936599}
   - component: {fileID: 7243932600104648681}
+  - component: {fileID: 7422182918107662931}
+  - component: {fileID: -6941435710334034697}
   m_Layer: 0
   m_Name: Power Punch Lightning
   m_TagString: LightningCross
@@ -663,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7910486248873608179}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.65, y: -4.42, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
@@ -685,6 +687,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.7
+--- !u!114 &7422182918107662931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910486248873608179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-6941435710334034697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910486248873608179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a156b917f3781418c2e44e13d4d32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 18
 --- !u!1 &7997986491244211572
 GameObject:
   m_ObjectHideFlags: 0

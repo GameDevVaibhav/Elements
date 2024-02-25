@@ -42,6 +42,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1085097233057017694}
   - component: {fileID: -6697533782328286107}
+  - component: {fileID: 336235673343740443}
+  - component: {fileID: 9090216840566728229}
   m_Layer: 0
   m_Name: Ultimate_Lightning
   m_TagString: LightningCross
@@ -81,6 +83,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1.5
+--- !u!114 &336235673343740443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947666955498455946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &9090216840566728229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947666955498455946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a156b917f3781418c2e44e13d4d32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 11
 --- !u!1 &1166232113109521279
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c0a13c98c86e143bde8d0162609e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Target_R
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &3206555433248676402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c0a13c98c86e143bde8d0162609e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Target_M
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &6754684048515253994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c0a13c98c86e143bde8d0162609e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Target_L
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &4184522779456364603
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6409322311610376794}
   - component: {fileID: 3278490453047297588}
   - component: {fileID: 8576504457389705817}
+  - component: {fileID: 830741647591802938}
+  - component: {fileID: 5109765528496521420}
   m_Layer: 0
   m_Name: UpperSlash_Lightning
   m_TagString: Untagged
@@ -4882,6 +4884,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &830741647591802938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326599102873781284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5109765528496521420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326599102873781284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbe48abdf5c2714db01e0e2c763e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxDamage: 10
 --- !u!1 &1471111993385235458
 GameObject:
   m_ObjectHideFlags: 0
