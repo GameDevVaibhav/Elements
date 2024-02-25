@@ -45,9 +45,29 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        if(Input.GetKey(KeyCode.LeftAlt) && isGrounded && !Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("isDefending", true);
+        }
+        
+        else 
+        {
+            
+            animator.SetBool("isDefending", false);
+        }
+        if (Input.GetKey(KeyCode.LeftAlt)&& Input.GetKey(KeyCode.S) && isGrounded )
+        {
+            animator.SetBool("isLowDefending", true);
+        }
+
+        else
+        {
+
+            animator.SetBool("isLowDefending", false);
+        }
 
         // Set player's rotation based on opponent's position
-       
+
         {
             FlipTowardsOpponent();
         }

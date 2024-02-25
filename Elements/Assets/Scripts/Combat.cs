@@ -184,6 +184,8 @@ public class Combat : MonoBehaviour
                     // Trigger the clear animation.
                     StartCombatAction("Clear");
                 }
+
+                
             }
 
 
