@@ -22,6 +22,7 @@ public class Player_Health : MonoBehaviour
         {
             currentHealth -= damage;
             Debug.Log(player + " Took Damage "+damage);
+
         } 
     }
 
