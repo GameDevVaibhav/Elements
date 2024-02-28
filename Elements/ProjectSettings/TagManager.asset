@@ -18,6 +18,7 @@ TagManager:
   - Player_Earth
   - rock_power_hit
   - UpperSlash
+  - Tackle
   layers:
   - Default
   - TransparentFX

@@ -10,11 +10,18 @@ public class VfxDamageHandler : MonoBehaviour
 
     [SerializeField]
     float vfxDamage;
+
+    bool isTackle;
     private void Start()
     {
         vfxPV = GetComponent<PhotonView>();
         vfxOwner = vfxPV.Owner.ToString();
-        
+
+        if (gameObject.CompareTag("Tackle"))
+        {
+            isTackle = true;
+        }
+        else { isTackle= false; }
     }
 
     private void OnTriggerEnter2D(Collider2D player)
@@ -29,7 +36,8 @@ public class VfxDamageHandler : MonoBehaviour
             if (vfxOwner == "#01 'Player1'")
             {
                 Debug.Log("Player1 attacked player 2");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage);
+                
+                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage,isTackle);
 
             }
             
@@ -40,7 +48,8 @@ public class VfxDamageHandler : MonoBehaviour
             if (vfxOwner == "#02 'Player2'")
             {
                 Debug.Log("Player2 attacked player 1");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage);
+                
+                playerPV.RPC("TakeDamageRPC", RpcTarget.AllBuffered, playerName,vfxDamage,isTackle);
             }
            
         }

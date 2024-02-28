@@ -29301,7 +29301,7 @@ GameObject:
   - component: {fileID: 2282604567982086871}
   m_Layer: 0
   m_Name: Tackle_Earth
-  m_TagString: Untagged
+  m_TagString: Tackle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

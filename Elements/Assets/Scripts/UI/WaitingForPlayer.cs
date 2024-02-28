@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WaitingForPlayer : MonoBehaviour
 {
-    Player_Health[] playersHealth;
+    Player_Health[] players;
     public GameObject playUI;
     public GameObject player2;
     private bool hasWaited = false;
@@ -16,19 +16,20 @@ public class WaitingForPlayer : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
     {
-        playersHealth = FindObjectsOfType<Player_Health>();
+        players = FindObjectsOfType<Player_Health>();
 
-        if (playersHealth.Length == 2 && !hasWaited)
+        
+        if (players.Length == 2 && !hasWaited)
         {
             player2.SetActive(true);
             Debug.Log("Player Joined");
 
-            
+           // player2Name.text = player2.name; 
             StartCoroutine(WaitAndActivateUI(5f));
             hasWaited = true;
         }

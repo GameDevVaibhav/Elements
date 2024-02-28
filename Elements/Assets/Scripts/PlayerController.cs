@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
      GameObject opponent;
     bool opponentFound = false;
 
-    
+    public bool isDefending = false;
     void Start()
     {
         // Get the Animator component.
@@ -45,32 +45,13 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        if(Input.GetKey(KeyCode.LeftAlt) && isGrounded && !Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("isDefending", true);
-        }
+       
+        Defending();
+        LowDefending();
+
         
-        else 
-        {
-            
-            animator.SetBool("isDefending", false);
-        }
-        if (Input.GetKey(KeyCode.LeftAlt)&& Input.GetKey(KeyCode.S) && isGrounded )
-        {
-            animator.SetBool("isLowDefending", true);
-        }
-
-        else
-        {
-
-            animator.SetBool("isLowDefending", false);
-        }
-
-        // Set player's rotation based on opponent's position
-
-        {
-            FlipTowardsOpponent();
-        }
+        FlipTowardsOpponent();
+        
 
         Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
         collider.size = spriteSize;
@@ -84,6 +65,40 @@ public class PlayerController : MonoBehaviour
 
         // Trigger the Jump animation.
         animator.SetBool("isJumping", true);
+    }
+
+    void Defending()
+    {
+       
+        if (Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("Defending");
+
+            animator.SetBool("isDefending", true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftAlt) )
+        {
+            Debug.Log("not Defending");
+
+            animator.SetBool("isDefending", false);
+        }
+    }
+
+    void LowDefending()
+    {
+       
+        if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("hold Defending");
+
+            animator.SetBool("LowDefending", true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S))
+        {
+            Debug.Log("not Defending");
+
+            animator.SetBool("LowDefending", false);
+        }
     }
 
     private bool IsCurrentAnimation(string animationName)

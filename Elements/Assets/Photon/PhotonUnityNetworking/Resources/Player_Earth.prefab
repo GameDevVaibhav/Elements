@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
+  defence: 0
 --- !u!212 &8135474455307439946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -402,6 +403,12 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 2
     Name: Long_Power_Hit
+  - Type: 9
+    SynchronizeType: 1
+    Name: Defending
+  - Type: 9
+    SynchronizeType: 2
+    Name: LowDefending
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

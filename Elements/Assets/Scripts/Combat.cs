@@ -14,7 +14,9 @@ public class Combat : MonoBehaviour
     string playerType;
 
     bool fire, water, lightning, earth=false;
+
     
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,14 @@ public class Combat : MonoBehaviour
             // Check if combat is in progress before processing new combat inputs
             if (IsCurrentAnimation("Idle"))
             {
+                
+
+
+
+
+
+
+
                 if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
                 {
                     // Trigger the punch animation.
@@ -185,7 +195,7 @@ public class Combat : MonoBehaviour
                     StartCombatAction("Clear");
                 }
 
-                
+
             }
 
 

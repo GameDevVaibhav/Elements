@@ -24466,7 +24466,7 @@ GameObject:
   - component: {fileID: 247742084484312252}
   m_Layer: 0
   m_Name: Tackle_Lightning
-  m_TagString: Untagged
+  m_TagString: Tackle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

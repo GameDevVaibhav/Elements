@@ -55,7 +55,6 @@ public class BaseVFX : MonoBehaviour
 
             spawnedVfx = PhotonNetwork.Instantiate("VFX/"+vfxPrefab, transform.position + localOffset, transform.rotation);
             
-
         }
 
        
