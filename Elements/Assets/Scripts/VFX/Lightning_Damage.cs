@@ -34,14 +34,14 @@ public class Lightning_Damage : MonoBehaviour
             {
                 if (playerPV.Owner.ToString() == "#01 'Player1'")
                 {
-                    playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                    playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage, false);
                 }
             }
             else if (vfxOwner == "#01 'Player1'")
             {
                 if (playerPV.Owner.ToString() == "#02 'Player2'")
                 {
-                    playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                    playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage, false);
                 }
             }
         }

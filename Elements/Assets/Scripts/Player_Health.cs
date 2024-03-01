@@ -21,6 +21,7 @@ public class Player_Health : MonoBehaviour
     [PunRPC]
     public void TakeDamageRPC(string player,float damage,bool isTackle)
     {
+        
         if (player == photonView.Owner.ToString())
         {
             if (isTackle)
@@ -57,5 +58,16 @@ public class Player_Health : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName("LowerDefence");
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("colliding");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Punch"))
+            {
+                Debug.Log("Punch Detected");
+            }
+        }
+    }
 }
 

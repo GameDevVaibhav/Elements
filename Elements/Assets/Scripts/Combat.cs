@@ -49,11 +49,16 @@ public class Combat : MonoBehaviour
     private void StartCombatAction(string triggerName)
     {
 
-        
-        // Trigger the combat action animation
-        animator.SetTrigger(triggerName);
-        vfx.HandleVFX(triggerName);
-        
+        if (triggerName == "Punch" || triggerName == "Kick")
+        {
+            animator.SetTrigger(triggerName);
+        }
+
+        else
+        {
+            animator.SetTrigger(triggerName);
+            vfx.HandleVFX(triggerName);
+        }
 
         
     }

@@ -125,7 +125,7 @@ public class VFXMovement : MonoBehaviour
             if (vfxOwner == "#02 'Player2'")
             {
                 Debug.Log("Ball Hit Player1");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage,false);
                 Destroy(gameObject);
             }
 
@@ -135,7 +135,7 @@ public class VFXMovement : MonoBehaviour
             if (vfxOwner == "#01 'Player1'")
             {
                 Debug.Log("Ball Hit Player2");
-                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage);
+                playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage,false);
                 Destroy(gameObject);
             }
 

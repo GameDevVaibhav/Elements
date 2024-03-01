@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 20
+  isDefending: 0
 --- !u!114 &4174007305825150811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
+  defence: 0
 --- !u!212 &495376477448862967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -271,7 +273,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -0.0720619, y: -0.1075058}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -462,6 +464,15 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 2
     Name: Long_Power_Hit
+  - Type: 9
+    SynchronizeType: 2
+    Name: Defending
+  - Type: 4
+    SynchronizeType: 2
+    Name: isDefending
+  - Type: 4
+    SynchronizeType: 2
+    Name: LowDefending
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
