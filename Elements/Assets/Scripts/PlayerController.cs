@@ -75,16 +75,16 @@ public class PlayerController : MonoBehaviour
 
     void Defending()
     {
-        //Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.S)
-        if (isDefending && player_Health.currentdefenceHealth!=0)
+        
+        if (Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.S) && player_Health.currentDefenceHealth !=0)
         {
             Debug.Log("Defending");
 
             animator.SetBool("isDefending", true);
         }
-        if(player_Health.currentdefenceHealth==0) { isDefending = false; }
-       // Input.GetKeyUp(KeyCode.LeftAlt)
-        if (!isDefending )
+       // if(player_Health.currentDefenceHealth==0) { isDefending = false; }
+       // 
+        if (player_Health.currentDefenceHealth == 0 || Input.GetKeyUp(KeyCode.LeftAlt))
         {
             Debug.Log("not Defending");
 
@@ -94,16 +94,16 @@ public class PlayerController : MonoBehaviour
 
     void LowDefending()
     {
-       // Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.S)
-        if (isLowDefending && player_Health.currentdefenceHealth != 0)
+       // 
+        if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.S) && player_Health.currentDefenceHealth != 0)
         {
             Debug.Log("hold Defending");
 
             animator.SetBool("LowDefending", true);
         }
-        if (player_Health.currentdefenceHealth == 0) { isLowDefending = false; }
-        //Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S)
-        if (!isLowDefending)
+        //if (player_Health.currentDefenceHealth == 0) { isLowDefending = false; }
+        //
+        if ((player_Health.currentDefenceHealth == 0) || Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S))
         {
             Debug.Log("not Defending");
 

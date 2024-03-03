@@ -36,13 +36,13 @@ public class Play_UI : MonoBehaviour
             {
                 healthPlayer1.text = player.currentHealth.ToString();
                 value1 = player.currentHealth;
-                defenceHealth1.value = player.currentdefenceHealth;
+                defenceHealth1.value = player.currentDefenceHealth;
             }
             else
             {
                 healthPlayer2.text = player.currentHealth.ToString();
                 value2 = player.currentHealth;
-                defenceHealth2.value = player.currentdefenceHealth;
+                defenceHealth2.value = player.currentDefenceHealth;
                
             }
         }
