@@ -102,6 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
+  currentDefense: 0
+  maxDefense: 100
   defence: 0
 --- !u!212 &8767394514995061758
 SpriteRenderer:

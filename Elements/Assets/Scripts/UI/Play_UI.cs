@@ -12,6 +12,9 @@ public class Play_UI : MonoBehaviour
     public Slider healthBarPlayer1;
     public Slider healthBarPlayer2;
 
+    public Slider defenceHealth1;
+    public Slider defenceHealth2;
+
     float value1;
     float value2;
 
@@ -33,12 +36,13 @@ public class Play_UI : MonoBehaviour
             {
                 healthPlayer1.text = player.currentHealth.ToString();
                 value1 = player.currentHealth;
-                
+                defenceHealth1.value = player.currentdefenceHealth;
             }
             else
             {
                 healthPlayer2.text = player.currentHealth.ToString();
                 value2 = player.currentHealth;
+                defenceHealth2.value = player.currentdefenceHealth;
                
             }
         }

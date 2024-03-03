@@ -8,6 +8,8 @@ public class Player_Health : MonoBehaviour
     PhotonView photonView;
     public float currentHealth;
     public float maxHealth = 100f;
+    public float currentdefenceHealth;
+    public float maxDefenceHealth=100f;
 
     Animator animator;
     public bool defence;
@@ -16,6 +18,7 @@ public class Player_Health : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        currentdefenceHealth = maxDefenceHealth;
     }
 
     [PunRPC]
@@ -31,7 +34,7 @@ public class Player_Health : MonoBehaviour
                     currentHealth -= damage;
                     Debug.Log(player + " Took Damage " + damage);
                 }
-                else { }
+                else { currentdefenceHealth -= damage; Debug.Log("Defence Health Reduce "+currentdefenceHealth); }
             }
             else 
             {
@@ -40,10 +43,11 @@ public class Player_Health : MonoBehaviour
                     currentHealth -= damage;
                     Debug.Log(player + " Took Damage " + damage);
                 }
-                else { }
+                else { currentdefenceHealth -= damage; Debug.Log("Defence Health Reduce "+currentdefenceHealth); }
             }
 
             currentHealth = Mathf.Max(currentHealth, 0f);
+            currentdefenceHealth=Mathf.Max(currentdefenceHealth, 0f);
         } 
     }
 

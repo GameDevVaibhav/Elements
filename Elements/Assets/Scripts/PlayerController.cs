@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D collider;
 
+    Player_Health player_Health;
+
     // Reference to the opponent
      GameObject opponent;
     bool opponentFound = false;
 
     public bool isDefending = false;
+    public bool isLowDefending = false;
     void Start()
     {
         // Get the Animator component.
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
 
-        
+        player_Health = GetComponent<Player_Health>();
 
     }
 
@@ -72,14 +75,16 @@ public class PlayerController : MonoBehaviour
 
     void Defending()
     {
-       
-        if (Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.S))
+        //Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.S)
+        if (isDefending && player_Health.currentdefenceHealth!=0)
         {
             Debug.Log("Defending");
 
             animator.SetBool("isDefending", true);
         }
-        if (Input.GetKeyUp(KeyCode.LeftAlt) )
+        if(player_Health.currentdefenceHealth==0) { isDefending = false; }
+       // Input.GetKeyUp(KeyCode.LeftAlt)
+        if (!isDefending )
         {
             Debug.Log("not Defending");
 
@@ -89,14 +94,16 @@ public class PlayerController : MonoBehaviour
 
     void LowDefending()
     {
-       
-        if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.S))
+       // Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.S)
+        if (isLowDefending && player_Health.currentdefenceHealth != 0)
         {
             Debug.Log("hold Defending");
 
             animator.SetBool("LowDefending", true);
         }
-        if (Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S))
+        if (player_Health.currentdefenceHealth == 0) { isLowDefending = false; }
+        //Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S)
+        if (!isLowDefending)
         {
             Debug.Log("not Defending");
 
