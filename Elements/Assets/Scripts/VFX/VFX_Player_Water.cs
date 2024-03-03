@@ -18,6 +18,14 @@ public class VFX_Player_Water : BaseVFX
     public GameObject arrowThrowVFX;
     public GameObject arrowVFX;
 
+    public AudioClip slashAudioClip;
+    public AudioClip topBottomThrowAudioClip;
+    public AudioClip Rock_HitAudioClip;
+    public AudioClip ultimateThrowAudioClip;
+    public AudioClip longPowerHitAudioClip;
+    public AudioClip arrowAudioClip;
+    public GameObject player;
+
     public string water = "Water/";
     // Override the Start method if needed for specific initialization
     protected override void Start()
@@ -33,22 +41,28 @@ public class VFX_Player_Water : BaseVFX
             case "Tackle":
 
                 StartCoroutine(SpawnVFXWithDelay(water+ "/" + tackleVFX.name, 0.5f, Vector3.zero));
+                PlayAudio(slashAudioClip, 0.5f);
                 break;
             case "Upper_Slash":
                 StartCoroutine(SpawnVFXWithDelay(water+ "/" + upperSlashVFX.name, 0.3f, Vector3.zero));
+                PlayAudio(slashAudioClip, 0.3f);
                 break;
             case "Smash":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + smashVFX.name, 0.9f, Vector3.zero));
+                PlayAudio(slashAudioClip, 0.9f);
                 break;
             case "Front_Slash":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + frontSlashVFX.name, 0.5f, Vector3.zero));
+                PlayAudio(slashAudioClip, 0.5f);
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + frontSlash2VFX.name, 0.9f, Vector3.zero));
+                PlayAudio(slashAudioClip, 0.9f);
                 break;
             case "Top-Bottom_Throw":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + topBottomThrowVFX.name, 0.3f, new Vector3(0f, 5f, 0f)));
                 break;
             case "Spin_Kick":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + Spin_KickVFX.name, 0.9f, new Vector3(0f, 0f, 0f)));
+                PlayAudio(slashAudioClip, 0.9f);
                 break;
             case "Rock_Hit":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + Rock_HitVFX.name, 0.7f, new Vector3(-3f, -2.5f, 0f)));
@@ -65,13 +79,19 @@ public class VFX_Player_Water : BaseVFX
             case "Long_Power_Hit":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + longPowerHitVFX.name, 0.3f, new Vector3(0f, 0f, 0f)));
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + longPowerHitSlashVFX.name, 1.3f, new Vector3(0f, 0f, 0f)));
+                PlayAudio(slashAudioClip, 1.3f);
                 break;
             case "Arrow_Throw":
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + arrowThrowVFX.name, 0.3f, new Vector3(0f, 0f, 0f)));
+                PlayAudio(slashAudioClip, 0.3f);
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + arrowVFX.name, 0.5f, new Vector3(-3.5f, 0.4f, 0f)));
+                PlayAudio(arrowAudioClip, 0.5f);
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + arrowVFX.name, 0.8f, new Vector3(-3.5f, 0.4f, 0f)));
+                PlayAudio(arrowAudioClip, 0.8f);
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + arrowVFX.name, 1.5f, new Vector3(-3.5f, 0.4f, 0f)));
+                PlayAudio(arrowAudioClip, 1.5f);
                 StartCoroutine(SpawnVFXWithDelay(water + "/" + arrowVFX.name, 1.6f, new Vector3(-3.5f, 0.4f, 0f)));
+                PlayAudio(arrowAudioClip, 1.6f);
                 break;
 
             default:

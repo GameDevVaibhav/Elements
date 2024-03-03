@@ -15,8 +15,8 @@ public class Combat : MonoBehaviour
 
     bool fire, water, lightning, earth=false;
 
-    
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,7 @@ public class Combat : MonoBehaviour
         if (triggerName == "Punch" || triggerName == "Kick")
         {
             animator.SetTrigger(triggerName);
+            
         }
 
         else
@@ -62,6 +63,11 @@ public class Combat : MonoBehaviour
 
         
     }
+
+   
+
+
+
     private void Controls()
     {
         if (animator.GetBool("isJumping"))
@@ -71,27 +77,9 @@ public class Combat : MonoBehaviour
         else
         {
             // Check if combat is in progress before processing new combat inputs
-            if (IsCurrentAnimation("Idle"))
+            if (IsCurrentAnimation("Idle") || IsCurrentAnimation("Walk") || IsCurrentAnimation("ReverseWalk"))
             {
                 
-
-
-
-
-
-
-
-                if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
-                {
-                    // Trigger the punch animation.
-                    StartCombatAction("Punch");
-                }
-
-                if (Input.GetKeyDown(KeyCode.K) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))
-                {
-                    // Trigger the kick animation.
-                    StartCombatAction("Kick");
-                }
 
                 if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.S))
                 {
@@ -128,7 +116,7 @@ public class Combat : MonoBehaviour
                     StartCombatAction("Upper_Slash");
                 }
 
-                if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.L))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     
                     StartCombatAction("Front_Slash");
@@ -182,7 +170,7 @@ public class Combat : MonoBehaviour
                     StartCombatAction("Spin_Kick");
                 }
 
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     if (!lightning && !earth)
                     {

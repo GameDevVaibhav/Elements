@@ -56,9 +56,9 @@ public class PlayerController : MonoBehaviour
         FlipTowardsOpponent();
         
 
-        Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
-        collider.size = spriteSize;
-        collider.offset = Vector2.zero;
+        //Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
+        //collider.size = spriteSize;
+        //collider.offset = Vector2.zero;
     }
 
     void Jump()

@@ -42,8 +42,8 @@ public class Player_Health : MonoBehaviour
                 }
                 else { }
             }
-            
 
+            currentHealth = Mathf.Max(currentHealth, 0f);
         } 
     }
 
@@ -58,16 +58,6 @@ public class Player_Health : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName("LowerDefence");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("colliding");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Punch"))
-            {
-                Debug.Log("Punch Detected");
-            }
-        }
-    }
+  
 }
 

@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 667898889, guid: f84ea4d1c54961541a2c33ce1e769a2e, type: 3}
+  m_Sprite: {fileID: -117230349, guid: 71042a47d85a1ba438d2a2cd28a1e3a2, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -213,18 +213,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03800893, y: 0.05701399}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.8, y: 4.95}
+    oldSize: {x: 3.15, y: 4.5}
     newSize: {x: 4.2, y: 5.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 2.702669, y: 5.0588694}
+  m_Size: {x: 3, y: 4.522991}
   m_EdgeRadius: 0
 --- !u!95 &7520614372819827134
 Animator:
@@ -369,7 +369,7 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Tackle
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Upper_Slash
   - Type: 9
     SynchronizeType: 2
@@ -405,14 +405,20 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Long_Power_Hit
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Defending
   - Type: 9
     SynchronizeType: 2
     Name: LowDefending
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isDefending
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isReverseWalking
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -426,6 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66054382476289846}
   - component: {fileID: 3714723656001641550}
+  - component: {fileID: 7941693159273309427}
   m_Layer: 0
   m_Name: VFX Spawnner
   m_TagString: Untagged
@@ -476,3 +483,106 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 2126995372899371129, guid: 5cc57f7a258f31d4c9e257e193c8cbcf, type: 3}
   powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
   earth: Earth
+  slashAudioClip: {fileID: 8300000, guid: 9c525c9f3145cc24d87d5e2dad933350, type: 3}
+  topBottomThrowAudioClip: {fileID: 8300000, guid: 40a63b5d1c1ed3345872655acc459493, type: 3}
+  Rock_HitAudioClip: {fileID: 0}
+  ultimateThrowAudioClip: {fileID: 8300000, guid: 7104026d91972ef4e9fde77d0dabb264, type: 3}
+  longPowerHitAudioClip: {fileID: 0}
+  smashAudioClip: {fileID: 8300000, guid: 8461cd6d350c78c4cb2685078e421156, type: 3}
+  player: {fileID: 0}
+--- !u!82 &7941693159273309427
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288693446781413516}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

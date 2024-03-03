@@ -15,12 +15,16 @@ public class BaseVFX : MonoBehaviour
 
     Transform target;
 
+    protected AudioSource audioSource;
+
+    
 
     protected virtual void Start()
     {
         
         combat = FindObjectOfType<Combat>();
-        
+        audioSource = GetComponent<AudioSource>();
+
 
     }
 
@@ -30,9 +34,21 @@ public class BaseVFX : MonoBehaviour
         StartCoroutine(SpawnVFXWithDelay(defaultVFX, 0.5f, Vector3.zero));
     }
 
+    protected virtual void PlayAudio(AudioClip audioClip,float delayDuration)
+    {
+        StartCoroutine(SpawnAudioWithDelay(audioClip,delayDuration));
+    }
 
-
-
+    protected IEnumerator SpawnAudioWithDelay(AudioClip audioClip,float delayDuration)
+    {
+        yield return new WaitForSeconds(delayDuration);
+        if (audioSource != null && audioClip != null)
+        {
+            Debug.Log("Audio" + audioClip.name);
+            audioSource.PlayOneShot(audioClip);
+        }
+        
+    }
     protected IEnumerator SpawnVFXWithDelay(string vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);
@@ -43,7 +59,7 @@ public class BaseVFX : MonoBehaviour
         Debug.Log(players.Length);
         
         FindTarget(players);
-        Debug.Log(target);
+        
 
         if (vfxPrefab== "Earth/Power_Hit")
         {
@@ -57,10 +73,11 @@ public class BaseVFX : MonoBehaviour
             
         }
 
-       
+       // PlayAudio(tackleAudioClip);
 
     }
 
+   
 
     void FindTarget(GameObject[] players)
     {
