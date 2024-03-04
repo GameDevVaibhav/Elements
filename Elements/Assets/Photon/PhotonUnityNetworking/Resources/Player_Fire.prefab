@@ -581,12 +581,6 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 5870620260078445116, guid: 5ddddc8bd858c2049bcdca6dbe7454ec, type: 3}
   arrowThrowVFX: {fileID: 6634937837189348433, guid: d3fbd8c84a2e9714ba56c26f9eef55ee, type: 3}
   arrowVFX: {fileID: 3824398551635068440, guid: c8bfa37a6d3064640b6107519f6c8b38, type: 3}
-  slashAudioClip: {fileID: 8300000, guid: f8c68c097e2cc11428704986b9dc0dff, type: 3}
-  topBottomThrowAudioClip: {fileID: 0}
-  Rock_HitAudioClip: {fileID: 0}
-  ultimateThrowAudioClip: {fileID: 0}
-  longPowerHitAudioClip: {fileID: 0}
-  arrowAudioClip: {fileID: 8300000, guid: d487321c481e6fc43ab54d3b736a8d85, type: 3}
   player: {fileID: 0}
   fire: Fire
 --- !u!82 &2520072304923107443

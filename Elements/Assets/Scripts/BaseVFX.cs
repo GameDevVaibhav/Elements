@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using static UnityEngine.GraphicsBuffer;
 
-public class BaseVFX : MonoBehaviour
+public class BaseVFX : MonoBehaviourPun
 {
     
     public string defaultVFX;
@@ -34,21 +34,15 @@ public class BaseVFX : MonoBehaviour
         StartCoroutine(SpawnVFXWithDelay(defaultVFX, 0.5f, Vector3.zero));
     }
 
-    protected virtual void PlayAudio(AudioClip audioClip,float delayDuration)
-    {
-        StartCoroutine(SpawnAudioWithDelay(audioClip,delayDuration));
-    }
+    
 
-    protected IEnumerator SpawnAudioWithDelay(AudioClip audioClip,float delayDuration)
-    {
-        yield return new WaitForSeconds(delayDuration);
-        if (audioSource != null && audioClip != null)
-        {
-            Debug.Log("Audio" + audioClip.name);
-            audioSource.PlayOneShot(audioClip);
-        }
-        
-    }
+   
+
+
+    
+  
+
+
     protected IEnumerator SpawnVFXWithDelay(string vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);
@@ -73,7 +67,7 @@ public class BaseVFX : MonoBehaviour
             
         }
 
-       // PlayAudio(tackleAudioClip);
+      
 
     }
 

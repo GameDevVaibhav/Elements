@@ -19,6 +19,7 @@ TagManager:
   - rock_power_hit
   - UpperSlash
   - Tackle
+  - Destruction_Audio
   layers:
   - Default
   - TransparentFX

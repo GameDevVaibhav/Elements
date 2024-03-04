@@ -4876,6 +4876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 175
   movementSpeed: 2
+  DestroyAudioClip: {fileID: 8300000, guid: fca8c193f89ea3649bd38ccd45050db1, type: 3}
 --- !u!58 &1465130274439836094
 CircleCollider2D:
   m_ObjectHideFlags: 0

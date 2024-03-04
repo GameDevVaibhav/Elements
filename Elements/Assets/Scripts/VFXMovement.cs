@@ -21,8 +21,14 @@ public class VFXMovement : MonoBehaviour
     [SerializeField]
     float damage;
 
+    GameObject audioSource;
+    public AudioClip DestroyAudioClip;
+    
+
     void Start()
     {
+
+        audioSource = GameObject.FindGameObjectWithTag("Destruction_Audio");
         vfxPV = GetComponent<PhotonView>();
         vfxOwner = vfxPV.Owner.ToString();
 
@@ -126,6 +132,7 @@ public class VFXMovement : MonoBehaviour
             {
                 Debug.Log("Ball Hit Player1");
                 playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage,false);
+                
                 Destroy(gameObject);
             }
 
@@ -136,11 +143,17 @@ public class VFXMovement : MonoBehaviour
             {
                 Debug.Log("Ball Hit Player2");
                 playerPV.RPC("TakeDamageRPC", RpcTarget.OthersBuffered, playerName, damage,false);
+                
                 Destroy(gameObject);
             }
 
         }
     }
 
-    
+    private void OnDestroy()
+    {
+        AudioSource audioComp=audioSource.GetComponent<AudioSource>();
+        audioComp.PlayOneShot(DestroyAudioClip);
+    }
+
 }

@@ -60,6 +60,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 20
   isDefending: 0
+  isLowDefending: 0
 --- !u!114 &7865378578949909245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
-  defence: 0
+  currentDefenceHealth: 0
+  maxDefenceHealth: 100
 --- !u!212 &8135474455307439946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -262,7 +264,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 1
+  Synchronization: 2
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
@@ -483,12 +485,6 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 2126995372899371129, guid: 5cc57f7a258f31d4c9e257e193c8cbcf, type: 3}
   powerHitVFX: {fileID: 6976791853360354352, guid: 153db6eaea7466e4e88684aa6d2413b0, type: 3}
   earth: Earth
-  slashAudioClip: {fileID: 8300000, guid: 9c525c9f3145cc24d87d5e2dad933350, type: 3}
-  topBottomThrowAudioClip: {fileID: 8300000, guid: 40a63b5d1c1ed3345872655acc459493, type: 3}
-  Rock_HitAudioClip: {fileID: 0}
-  ultimateThrowAudioClip: {fileID: 8300000, guid: 7104026d91972ef4e9fde77d0dabb264, type: 3}
-  longPowerHitAudioClip: {fileID: 0}
-  smashAudioClip: {fileID: 8300000, guid: 8461cd6d350c78c4cb2685078e421156, type: 3}
   player: {fileID: 0}
 --- !u!82 &7941693159273309427
 AudioSource:
