@@ -61,6 +61,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 20
   isDefending: 0
+  isLowDefending: 0
 --- !u!114 &2265596111214831886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,9 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
-  currentDefense: 0
-  maxDefense: 100
-  defence: 0
+  currentDefenceHealth: 0
+  maxDefenceHealth: 100
 --- !u!212 &8767394514995061758
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -581,12 +581,6 @@ MonoBehaviour:
   longPowerHitSlashVFX: {fileID: 2671160968900942478, guid: e3d9213f21800a54a95ee1a291aba11c, type: 3}
   arrowThrowVFX: {fileID: 7610956249698390203, guid: 88f2b0bf7394bc14e81566276b17b3c2, type: 3}
   arrowVFX: {fileID: 8435576465026244127, guid: 4f74cf66641573845b94b0a980ca539c, type: 3}
-  slashAudioClip: {fileID: 8300000, guid: dc56aca887b758542a8405ed24849b93, type: 3}
-  topBottomThrowAudioClip: {fileID: 0}
-  Rock_HitAudioClip: {fileID: 0}
-  ultimateThrowAudioClip: {fileID: 0}
-  longPowerHitAudioClip: {fileID: 0}
-  arrowAudioClip: {fileID: 8300000, guid: b47b8b0ad40de1a4f8229b760ad01367, type: 3}
   player: {fileID: 0}
   water: Water
 --- !u!82 &9196566678873838981

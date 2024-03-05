@@ -8,46 +8,78 @@ using Photon.Pun;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class MainMenu : MonoBehaviour
 {
-    public Button Fire;
-   public Button Water;
-   public Button Lightning;
-   public Button Earth;
+    
+
+    public GameObject createRoomPanel;
+    public GameObject joinRoomPanel;
+
+   
 
     string selectedType;
+    string selectedMap;
 
     void Start()
     {
-        // Assuming you have references to your buttons
-        Fire.onClick.AddListener(OnFireButtonClick);
-        Water.onClick.AddListener(OnWaterButtonClick);
-        Lightning.onClick.AddListener(OnLightningButtonClick);
-        Earth.onClick.AddListener(OnEarthButtonClick);
 
-        // Load the previously selected type from PlayerPrefs (default to Player_Fire if not found)
+
+        selectedMap = PlayerPrefs.GetString("SelectedMap", "Map_Fire");
         selectedType = PlayerPrefs.GetString("SelectedPlayerType", "Player_Fire");
     }
 
-    void OnFireButtonClick()
+    public void OnCreateRoomButtonClick()
+    {
+        createRoomPanel.SetActive(true);
+        joinRoomPanel.SetActive(false);
+    }
+
+    public void OnJoinRoomButtonClick()
+    {
+        createRoomPanel.SetActive(false);
+        joinRoomPanel.SetActive(true);
+    }
+
+    public void OnFireMapButtonClick()
+    {
+        selectedMap = "Map_Fire";
+        SaveSelectedMap();
+    }
+    public void OnWaterMapButtonClick()
+    {
+        selectedMap = "Map_Water";
+        SaveSelectedMap();
+    }
+    public void OnEarthMapButtonClick()
+    {
+        selectedMap = "Map_Earth";
+        SaveSelectedMap();
+    }
+    public void OnLightningMapButtonClick()
+    {
+        selectedMap = "Map_Lightning";
+        SaveSelectedMap();
+    }
+    public void OnFireButtonClick()
     {
         selectedType = "Player_Fire";
         SaveSelectedType();
     }
 
-    void OnWaterButtonClick()
+    public void OnWaterButtonClick()
     {
         selectedType = "Player_Water";
         SaveSelectedType();
     }
 
-    void OnLightningButtonClick()
+    public void OnLightningButtonClick()
     {
         selectedType = "Player_Lightning";
         SaveSelectedType();
     }
 
-    void OnEarthButtonClick()
+   public  void OnEarthButtonClick()
     {
         selectedType = "Player_Earth";
         SaveSelectedType();
@@ -58,5 +90,17 @@ public class MainMenu : MonoBehaviour
         // Save the selected type to PlayerPrefs
         PlayerPrefs.SetString("SelectedPlayerType", selectedType);
         PlayerPrefs.Save();
+    }
+
+    void SaveSelectedMap()
+    {
+        PlayerPrefs.SetString("SelectedMap", selectedMap);
+        PlayerPrefs.Save();
+    }
+
+    public void ClosePanel()
+    {
+        createRoomPanel.SetActive(false);
+        joinRoomPanel.SetActive(false);
     }
 }

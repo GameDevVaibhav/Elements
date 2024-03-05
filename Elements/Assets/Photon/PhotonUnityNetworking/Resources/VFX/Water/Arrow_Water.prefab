@@ -235,6 +235,7 @@ MonoBehaviour:
   height: 0
   time: 1
   damage: 6
+  DestroyAudioClip: {fileID: 0}
 --- !u!61 &7298149782273407933
 BoxCollider2D:
   m_ObjectHideFlags: 0
