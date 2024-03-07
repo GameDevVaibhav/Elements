@@ -15,6 +15,11 @@ public class Play_UI : MonoBehaviour
     public Slider defenceHealth1;
     public Slider defenceHealth2;
 
+    
+
+    
+    
+
     float value1;
     float value2;
 
@@ -37,20 +42,27 @@ public class Play_UI : MonoBehaviour
                 healthPlayer1.text = player.currentHealth.ToString();
                 value1 = player.currentHealth;
                 defenceHealth1.value = player.currentDefenceHealth;
+
+                
+                
             }
             else
             {
                 healthPlayer2.text = player.currentHealth.ToString();
                 value2 = player.currentHealth;
                 defenceHealth2.value = player.currentDefenceHealth;
-               
+
             }
+            
         }
 
-        
 
-        healthBarPlayer1.value = value1;
-        healthBarPlayer2.value = value2;
-        
+
+        healthBarPlayer1.value = Mathf.Lerp(healthBarPlayer1.value, value1, Time.deltaTime * 5);
+        healthBarPlayer2.value = Mathf.Lerp(healthBarPlayer2.value, value2, Time.deltaTime * 5);
+
     }
+
+    
+   
 }

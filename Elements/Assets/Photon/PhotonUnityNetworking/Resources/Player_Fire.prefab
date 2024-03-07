@@ -105,6 +105,7 @@ MonoBehaviour:
   maxHealth: 100
   currentDefenceHealth: 0
   maxDefenceHealth: 100
+  currentPowerUp: 0
 --- !u!212 &8767394514995061758
 SpriteRenderer:
   m_ObjectHideFlags: 0

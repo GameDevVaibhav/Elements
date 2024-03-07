@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D collider;
 
     Player_Health player_Health;
+    
 
     // Reference to the opponent
      GameObject opponent;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
 
         player_Health = GetComponent<Player_Health>();
+        
 
     }
 
@@ -82,8 +84,7 @@ public class PlayerController : MonoBehaviour
 
             animator.SetBool("isDefending", true);
         }
-       // if(player_Health.currentDefenceHealth==0) { isDefending = false; }
-       // 
+       
         if (player_Health.currentDefenceHealth == 0 || Input.GetKeyUp(KeyCode.LeftAlt))
         {
             Debug.Log("not Defending");
@@ -101,8 +102,7 @@ public class PlayerController : MonoBehaviour
 
             animator.SetBool("LowDefending", true);
         }
-        //if (player_Health.currentDefenceHealth == 0) { isLowDefending = false; }
-        //
+        
         if ((player_Health.currentDefenceHealth == 0) || Input.GetKeyUp(KeyCode.LeftAlt) || Input.GetKeyUp(KeyCode.S))
         {
             Debug.Log("not Defending");

@@ -45,6 +45,9 @@ MonoBehaviour:
   - UpdateHealthRPC
   - TakeDamageRPC
   - PlayAudioRPC
+  - PowerUp
+  - PowerUpRPC
+  - UpdatePowerUpValue
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

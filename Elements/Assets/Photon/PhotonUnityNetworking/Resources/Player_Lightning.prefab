@@ -59,12 +59,6 @@ MonoBehaviour:
   crossSlashVFX: {fileID: 386768833050501693, guid: 922e27c6f8da4ec41908a63d18f100f1, type: 3}
   powerHitVFX: {fileID: 541977385707056074, guid: d50c1a4814285d549a740751b2a66103, type: 3}
   lightningTarget: {fileID: 0}
-  slashAudioClip: {fileID: 8300000, guid: 79412abd8d324e345ae8e0603985c918, type: 3}
-  lightningStrikeClip: {fileID: 8300000, guid: 44412cf4b0324a14083ba76619d9f791, type: 3}
-  PowerHitAudioClip: {fileID: 8300000, guid: 0699ceb105dde4f40bf751b609b75a9a, type: 3}
-  ultimateThrowAudioClip: {fileID: 0}
-  longPowerHitAudioClip: {fileID: 0}
-  arrowAudioClip: {fileID: 0}
   player: {fileID: 0}
   Target: {fileID: 0}
   light: Lightning
@@ -224,6 +218,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 20
   isDefending: 0
+  isLowDefending: 0
 --- !u!114 &4174007305825150811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
-  defence: 0
+  currentDefenceHealth: 0
+  maxDefenceHealth: 100
+  currentPowerUp: 0
 --- !u!212 &495376477448862967
 SpriteRenderer:
   m_ObjectHideFlags: 0

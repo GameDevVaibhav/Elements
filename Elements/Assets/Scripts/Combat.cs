@@ -10,6 +10,10 @@ public class Combat : MonoBehaviour
 
     CombatMovement combatMovement;
     PhotonView PV;
+    string pvOwner;
+
+    Play_UI play_ui;
+    
 
     string playerType;
 
@@ -21,7 +25,11 @@ public class Combat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         PV = GetComponent<PhotonView>();
+
+        pvOwner= PV.Owner.ToString();
         // Get the Animator component.
         animator = GetComponent<Animator>();
 
@@ -37,6 +45,9 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+
         if (!PV.IsMine)
         {
             return;
@@ -65,7 +76,7 @@ public class Combat : MonoBehaviour
     }
 
    
-
+   
 
 
     private void Controls()
@@ -154,8 +165,10 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Z))
                 {
-                    // Trigger the ultimate throw animation.
                     StartCombatAction("Ultimate_Throw");
+
+                   
+                    
                 }
 
                 if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
