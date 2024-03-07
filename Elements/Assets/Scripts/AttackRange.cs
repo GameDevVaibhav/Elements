@@ -22,8 +22,5 @@ public class AttackRange : MonoBehaviour
         Debug.Log(circleCollider.offset);
     }
   
-
-   
-
   
 }

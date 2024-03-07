@@ -5,6 +5,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
 
+
 public class Play_UI : MonoBehaviour
 {
     public TextMeshProUGUI healthPlayer1;
@@ -15,10 +16,12 @@ public class Play_UI : MonoBehaviour
     public Slider defenceHealth1;
     public Slider defenceHealth2;
 
-    
+    public Image timer;
 
-    
-    
+
+    float timerValue = 0f; 
+    float maxTimerValue = 90f;
+
 
     float value1;
     float value2;
@@ -32,19 +35,26 @@ public class Play_UI : MonoBehaviour
     
     void Update()
     {
-        
-        
-        foreach(Player_Health player in playersHealth)
+
+        Timer();
+        HealthandDefenceBar();
+
+    }
+
+    
+    void HealthandDefenceBar()
+    {
+        foreach (Player_Health player in playersHealth)
         {
-            PhotonView pv= player.GetComponent<PhotonView>();
-            if(pv.Owner.ToString()== "#01 'Player1'")
+            PhotonView pv = player.GetComponent<PhotonView>();
+            if (pv.Owner.ToString() == "#01 'Player1'")
             {
                 healthPlayer1.text = player.currentHealth.ToString();
                 value1 = player.currentHealth;
                 defenceHealth1.value = player.currentDefenceHealth;
 
-                
-                
+
+
             }
             else
             {
@@ -53,16 +63,31 @@ public class Play_UI : MonoBehaviour
                 defenceHealth2.value = player.currentDefenceHealth;
 
             }
-            
+
         }
 
 
 
         healthBarPlayer1.value = Mathf.Lerp(healthBarPlayer1.value, value1, Time.deltaTime * 5);
         healthBarPlayer2.value = Mathf.Lerp(healthBarPlayer2.value, value2, Time.deltaTime * 5);
-
     }
 
-    
+    void Timer()
+    {
+        if (timerValue < maxTimerValue)
+        {
+            timerValue += Time.deltaTime;
+
+            // Update the image fill amount based on the timer progress
+            float fillAmount = timerValue / maxTimerValue;
+            timer.fillAmount = fillAmount;
+        }
+        else
+        {
+            
+            Debug.Log("Match is over!");
+            
+        }
+    }
    
 }

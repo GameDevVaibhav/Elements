@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79cb815eea84b6741be62673d9856477
+guid: 54f637085a88a044c8d93157b29ed259
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,112 +147,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Power Punch_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 97
-        width: 421
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7470fe4dce8a794c868caeb10a9ef99
-      internalID: -1144272526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Power Punch_1
-      rect:
-        serializedVersion: 2
-        x: 436
-        y: 96
-        width: 375
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: decf684c1ac397e4292041adfff796e5
-      internalID: -222973395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Power Punch_2
-      rect:
-        serializedVersion: 2
-        x: 902
-        y: 96
-        width: 283
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45a8a91ed6f07ec4ab7de489b7785b9f
-      internalID: 798919320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Power Punch_3
-      rect:
-        serializedVersion: 2
-        x: 1361
-        y: 96
-        width: 211
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dfa24ac13072834cba78e2d54214c65
-      internalID: -1757264596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Power Punch_4
-      rect:
-        serializedVersion: 2
-        x: 1804
-        y: 96
-        width: 296
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6032006d276ad4447a1a840f45bfeaab
-      internalID: 336380027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -263,12 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Power Punch_0: -1144272526
-      Power Punch_1: -222973395
-      Power Punch_2: 798919320
-      Power Punch_3: -1757264596
-      Power Punch_4: 336380027
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
