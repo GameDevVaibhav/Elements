@@ -46,8 +46,17 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
 
-        animator.SetBool("isWalking", horizontalInput < 0);
-        animator.SetBool("isReverseWalking", horizontalInput > 0);
+        if(transform.rotation.eulerAngles.y == 0f)
+        {
+            animator.SetBool("isWalking", horizontalInput < 0);
+            animator.SetBool("isReverseWalking", horizontalInput > 0);
+        }
+        else
+        {
+            animator.SetBool("isWalking", horizontalInput > 0);
+            animator.SetBool("isReverseWalking", horizontalInput < 0);
+        }
+        
 
         if (Input.GetButtonDown("Jump") && isGrounded && (IsCurrentAnimation("Idle")||IsCurrentAnimation("Walk")||IsCurrentAnimation("ReverseWalk")))
         {

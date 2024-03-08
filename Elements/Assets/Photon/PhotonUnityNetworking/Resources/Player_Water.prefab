@@ -102,9 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 100
   currentDefenceHealth: 0
-  maxDefenceHealth: 100
   currentPowerUp: 0
 --- !u!212 &8767394514995061758
 SpriteRenderer:

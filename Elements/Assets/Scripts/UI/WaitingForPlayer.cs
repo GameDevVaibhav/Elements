@@ -13,8 +13,7 @@ public class WaitingForPlayer : MonoBehaviour
     public GameObject player2;
     private bool hasWaited = false;
 
-    public TextMeshProUGUI player1Name;
-    public TextMeshProUGUI player2Name;
+    
 
 
 
@@ -50,7 +49,7 @@ public class WaitingForPlayer : MonoBehaviour
 
             StartCoroutine(WaitAndPlay());
 
-           // player2Name.text = player2.name; 
+          
             StartCoroutine(WaitAndActivateUI(6f));
             hasWaited = true;
         }

@@ -8,9 +8,9 @@ public class Player_Health : MonoBehaviour
 {
     PhotonView photonView;
     public float currentHealth;
-    public float maxHealth = 100f;
+    float maxHealth = 200f;
     public float currentDefenceHealth;
-    public float maxDefenceHealth = 100f;
+    float maxDefenceHealth = 100f;
     public float currentPowerUp;
     
 
@@ -39,6 +39,7 @@ public class Player_Health : MonoBehaviour
                 {
                     currentHealth -= damage;
                    
+
                     Debug.Log(player + " Took Damage " + damage);
                 }
                 else { ReduceDefenceHealth(damage); }
@@ -48,7 +49,8 @@ public class Player_Health : MonoBehaviour
                 if (!IsDefending())
                 {
                     currentHealth -= damage;
-                    
+                   
+
                     Debug.Log(player + " Took Damage " + damage);
                 }
                 else { ReduceDefenceHealth(damage); }
@@ -65,7 +67,7 @@ public class Player_Health : MonoBehaviour
     void ReduceDefenceHealth(float damage)
     {
         currentDefenceHealth -= damage;
-       // currentPowerup += damage / 2;
+       
         Debug.Log("Defence Health Reduce " + currentDefenceHealth);
 
         if (currentDefenceHealth <= 0 && !isRecoveringDefence)
@@ -107,5 +109,6 @@ public class Player_Health : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName("LowerDefence");
     }
 
+  
 }
 
