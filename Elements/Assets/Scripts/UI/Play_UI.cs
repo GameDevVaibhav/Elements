@@ -18,6 +18,8 @@ public class Play_UI : MonoBehaviour
 
     public Image timer;
 
+    public GameObject gameOverUi;
+
 
     float timerValue = 0f; 
     float maxTimerValue = 90f;
@@ -26,10 +28,13 @@ public class Play_UI : MonoBehaviour
     float value1;
     float value2;
 
+    string playerType;
+
     Player_Health[] playersHealth;
     void Start()
     {
         playersHealth = FindObjectsOfType<Player_Health>();
+       
     }
 
     
@@ -49,21 +54,22 @@ public class Play_UI : MonoBehaviour
             PhotonView pv = player.GetComponent<PhotonView>();
             if (pv.Owner.ToString() == "#01 'Player1'")
             {
-                healthPlayer1.text = player.currentHealth.ToString();
+                //healthPlayer1.text = player.currentHealth.ToString();
                 value1 = player.currentHealth;
                 defenceHealth1.value = player.currentDefenceHealth;
 
-
+                
 
             }
             else
             {
-                healthPlayer2.text = player.currentHealth.ToString();
+               // healthPlayer2.text = player.currentHealth.ToString();
                 value2 = player.currentHealth;
                 defenceHealth2.value = player.currentDefenceHealth;
 
+                
             }
-
+            
         }
 
 
@@ -86,8 +92,11 @@ public class Play_UI : MonoBehaviour
         {
             
             Debug.Log("Match is over!");
-            
+
+            gameOverUi.SetActive(true);
         }
     }
+
+    
    
 }

@@ -124,6 +124,8 @@ public class VFXMovement : MonoBehaviour
     {
 
         PhotonView playerPV = collision.gameObject.GetComponent<PhotonView>();
+
+        if (playerPV == null) { return; }
         string playerName = playerPV.Owner.ToString();
 
         if (playerName == "#01 'Player1'")

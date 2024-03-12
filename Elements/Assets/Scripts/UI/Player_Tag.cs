@@ -1,8 +1,10 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Player_Tag : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class Player_Tag : MonoBehaviour
     bool colorSet = false;
 
     public Image colorType;
+
+    
+
+    
+
     void Start()
     {
         playerType = PlayerPrefs.GetString("SelectedPlayerType", "Player_Fire");
@@ -45,5 +52,7 @@ public class Player_Tag : MonoBehaviour
 
         
     }
-
+     
+    
+    
 }
