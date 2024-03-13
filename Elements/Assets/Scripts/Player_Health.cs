@@ -38,7 +38,8 @@ public class Player_Health : MonoBehaviour
                 if (!IsLowDefending())
                 {
                     currentHealth -= damage;
-                   
+
+                    animator.SetTrigger("Fall");
 
                     Debug.Log(player + " Took Damage " + damage);
                 }
