@@ -45,7 +45,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         // Only the Master Client checks the result
-        if (PhotonNetwork.IsMasterClient)
+       // if (PhotonNetwork.IsMasterClient)
         {
             PhotonView pv = GetComponent<PhotonView>();
 
@@ -53,22 +53,36 @@ public class GameOver : MonoBehaviour
             bool player1Wins = false;
             bool isTie = false;
 
-            if (pvOwner == "#01 'Player1'")
+            
             {
                 float healthDiff = play_UI.healthBarPlayer1.value - play_UI.healthBarPlayer2.value;
                 player1Wins = (healthDiff > 0);
                 isTie = (healthDiff == 0);
 
             }
-            else if (pvOwner == "#02 'Player2'")
-            {
-                float healthDiff = play_UI.healthBarPlayer2.value - play_UI.healthBarPlayer1.value;
-                player1Wins = (healthDiff > 0);
-                isTie = (healthDiff == 0);
-            }
+            
 
             // Call the AnnounceWinner method on all clients
             pv.RPC("AnnounceWinner", RpcTarget.All, player1Wins, isTie);
+        }
+
+        SetGameOverOnAllPlayers(true);
+    }
+
+    void SetGameOverOnAllPlayers(bool isGameOver)
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject player in players)
+        {
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            Combat combat=player.GetComponent<Combat>();
+
+            if (playerController != null)
+            {
+                playerController.SetGameOver(isGameOver);
+                combat.SetGameOver(isGameOver);
+            }
         }
     }
 }

@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D collider;
 
     Player_Health player_Health;
-    
+
+    private bool gameOver = false;
 
     // Reference to the opponent
-     GameObject opponent;
+    GameObject opponent;
     bool opponentFound = false;
 
     public bool isDefending = false;
@@ -37,6 +38,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (gameOver)
+        {
+            
+            return;
+        }
         if (!opponentFound)
         {
             FindOpponent();
@@ -181,5 +187,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             OnGround();
         }
+    }
+
+    public void SetGameOver(bool isGameOver)
+    {
+        gameOver = isGameOver;
     }
 }

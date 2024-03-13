@@ -20,7 +20,7 @@ public class Combat : MonoBehaviour
     bool fire, water, lightning, earth=false;
 
 
-    
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +45,12 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        if (gameOver)
+        {
+
+            return;
+        }
+
 
         if (!PV.IsMine)
         {
@@ -213,4 +217,8 @@ public class Combat : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName(animationName);
     }
 
+    public void SetGameOver(bool isGameOver)
+    {
+        gameOver = isGameOver;
+    }
 }
