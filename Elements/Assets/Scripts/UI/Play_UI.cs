@@ -30,12 +30,21 @@ public class Play_UI : MonoBehaviour
 
     string playerType;
 
+    bool isMusicOn;
+    public AudioSource music;
     Player_Health[] playersHealth;
     public GameOver gameOver;
     void Start()
     {
         playersHealth = FindObjectsOfType<Player_Health>();
-       
+        isMusicOn = PlayerPrefs.GetInt("MusicOn", 1) == 1;
+
+        if (isMusicOn)
+        {
+            music.Play();
+        }
+        music.volume = PlayerPrefs.GetFloat("MusicVolume", 0.2f);
+
     }
 
     

@@ -21,10 +21,26 @@ public class MainMenu : MonoBehaviour
     private GameObject selectedPlayerButton;
     private RectTransform selectedButtonTransform;
 
+    private bool isMusicOn = true;
+    public Toggle musicToggle;
+    public AudioSource music;
+    public Slider volume;
+
     void Start()
     {
         selectedMap = PlayerPrefs.GetString("SelectedMap", "Map_Fire");
         selectedType = PlayerPrefs.GetString("SelectedPlayerType", "Player_Fire");
+
+        // Load music state from PlayerPrefs
+        isMusicOn = PlayerPrefs.GetInt("MusicOn", 1) == 1; 
+        musicToggle.isOn = isMusicOn;
+
+        
+    }
+    private void Update()
+    {
+        music.volume=volume.value;
+        PlayerPrefs.SetFloat("MusicVolume", music.volume);
     }
 
     public void OnCreateRoomButtonClick()
@@ -164,6 +180,25 @@ public class MainMenu : MonoBehaviour
             {
                 buttonRect.localScale = new Vector3(1f, 1f, 1f);
             }
+        }
+    }
+
+
+    public void ToggleMusic()
+    {
+        isMusicOn = musicToggle.isOn;
+
+        // Save the music state to PlayerPrefs
+        PlayerPrefs.SetInt("MusicOn", isMusicOn ? 1 : 0);
+        PlayerPrefs.Save();
+
+        if (isMusicOn)
+        {
+            music.Play();
+        }
+        else
+        {
+            music.Stop();
         }
     }
 }

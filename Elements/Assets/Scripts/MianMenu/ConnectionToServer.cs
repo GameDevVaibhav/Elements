@@ -3,25 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
+using Photon.Realtime;
 
 public class ConnectionToServer : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    GameObject mainMenu;
+    public TextMeshProUGUI connectionStatus;
+
     public void Start()
     {
-        // Connect to the Photon server when the MainMenu script starts
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    public override void OnConnectedToMaster()
+    public void Update()
     {
-        PhotonNetwork.JoinLobby();
+        PhotonNetwork.ConnectUsingSettings();
+
+        if(PhotonNetwork.NetworkClientState.ToString()== "ConnectedToMasterServer")
+        {
+            connectionStatus.text = "connected";
+            
+        }
+        else
+        {
+            connectionStatus.text = "disconnected";
+            
+        }
+        
+        Debug.Log(connectionStatus.text);
     }
 
-    public override void OnJoinedLobby()
-    {
-        Debug.Log("joined");
-        mainMenu.SetActive(true);
-    }
+    
+
+
+
+
+
+
+
 }
