@@ -21,6 +21,7 @@ public class Combat : MonoBehaviour
 
 
     private bool gameOver = false;
+    GameObject gameOverUi;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,12 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameOverUi = GameObject.FindGameObjectWithTag("GameOverUi");
+        if (gameOverUi != null)
+        {
+            Debug.Log("Found gameover");
+            return;
+        }
         if (gameOver)
         {
 
@@ -217,8 +224,5 @@ public class Combat : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName(animationName);
     }
 
-    public void SetGameOver(bool isGameOver)
-    {
-        gameOver = isGameOver;
-    }
+   
 }

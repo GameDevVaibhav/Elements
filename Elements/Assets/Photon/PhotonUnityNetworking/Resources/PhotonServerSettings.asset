@@ -49,6 +49,9 @@ MonoBehaviour:
   - PowerUpRPC
   - UpdatePowerUpValue
   - AnnounceWinner
+  - HandleRematch
+  - RematchRequested
+  - SetRematchRequest
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

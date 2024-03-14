@@ -110,6 +110,10 @@ public class Player_Health : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).IsName("LowerDefence");
     }
 
-  
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        currentDefenceHealth = maxDefenceHealth;
+    }
 }
 

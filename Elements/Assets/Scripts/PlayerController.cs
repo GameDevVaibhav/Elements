@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     Player_Health player_Health;
 
     private bool gameOver = false;
+    GameObject gameOverUi;
 
     // Reference to the opponent
     GameObject opponent;
@@ -38,9 +39,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (gameOver)
+        gameOverUi = GameObject.FindGameObjectWithTag("GameOverUi");
+        if (gameOverUi!=null)
         {
-            
+            Debug.Log("Found gameover");
             return;
         }
         if (!opponentFound)
@@ -189,8 +191,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetGameOver(bool isGameOver)
+   public void ResetPosition()
     {
-        gameOver = isGameOver;
+        PhotonView  pv=GetComponent<PhotonView>();
+
+        if(pv.Owner.ToString()== "#01 'Player1'")
+        {
+            transform.position =new Vector3(-13f,transform.position.y,transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(13f, transform.position.y, transform.position.z);
+        }
     }
 }

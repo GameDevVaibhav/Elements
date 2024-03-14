@@ -21,7 +21,7 @@ public class Play_UI : MonoBehaviour
     public GameObject gameOverUi;
 
 
-    float timerValue = 0f; 
+    public float timerValue = 0f; 
     float maxTimerValue = 90f;
 
 
@@ -31,6 +31,7 @@ public class Play_UI : MonoBehaviour
     string playerType;
 
     Player_Health[] playersHealth;
+    public GameOver gameOver;
     void Start()
     {
         playersHealth = FindObjectsOfType<Player_Health>();
@@ -72,7 +73,9 @@ public class Play_UI : MonoBehaviour
             if (player.currentHealth <= 0)
             {
                 // Set game over UI to true
+                
                 gameOverUi.SetActive(true);
+                
             }
 
         }

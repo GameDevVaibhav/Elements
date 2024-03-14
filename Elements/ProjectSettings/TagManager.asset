@@ -20,6 +20,7 @@ TagManager:
   - UpperSlash
   - Tackle
   - Destruction_Audio
+  - GameOverUi
   layers:
   - Default
   - TransparentFX
