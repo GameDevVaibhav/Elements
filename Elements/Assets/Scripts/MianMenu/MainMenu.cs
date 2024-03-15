@@ -201,4 +201,9 @@ public class MainMenu : MonoBehaviour
             music.Stop();
         }
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
