@@ -82,10 +82,11 @@ public class Play_UI : MonoBehaviour
             if (player.currentHealth <= 0)
             {
                 // Set game over UI to true
-                
+                player.GetComponent<Animator>().SetBool("Death",true);
                 gameOverUi.SetActive(true);
-                
+
             }
+            else { player.GetComponent<Animator>().SetBool("Death", false); }
 
         }
 

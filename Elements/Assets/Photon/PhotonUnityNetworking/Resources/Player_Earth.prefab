@@ -420,6 +420,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: isReverseWalking
+  - Type: 9
+    SynchronizeType: 0
+    Name: Fall
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
