@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+//this sets the map in play scene.
 public class Map : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;

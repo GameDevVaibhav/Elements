@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+//This script takes the Input key combination to start combat action. It calls the HandleVfx method and passes triggername.
 public class Combat : MonoBehaviour
 {
     private Animator animator;
@@ -23,7 +24,7 @@ public class Combat : MonoBehaviour
     private bool gameOver = false;
     GameObject gameOverUi;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -31,7 +32,7 @@ public class Combat : MonoBehaviour
         PV = GetComponent<PhotonView>();
 
         pvOwner= PV.Owner.ToString();
-        // Get the Animator component.
+        
         animator = GetComponent<Animator>();
 
         playerType = PlayerPrefs.GetString("SelectedPlayerType", "Player_Fire");
@@ -43,7 +44,7 @@ public class Combat : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         gameOverUi = GameObject.FindGameObjectWithTag("GameOverUi");
@@ -67,7 +68,7 @@ public class Combat : MonoBehaviour
        
     }
 
-    // Method to start combat action and prevent multiple triggers
+    
     private void StartCombatAction(string triggerName)
     {
 
@@ -94,11 +95,11 @@ public class Combat : MonoBehaviour
     {
         if (animator.GetBool("isJumping"))
         {
-            // Add any logic you want to perform while jumping
+            
         }
         else
         {
-            // Check if combat is in progress before processing new combat inputs
+           
             if (IsCurrentAnimation("Idle") || IsCurrentAnimation("Walk") || IsCurrentAnimation("ReverseWalk"))
             {
                 
@@ -134,7 +135,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.L))
                 {
-                    // Trigger the upper slash animation.
+                    
                     StartCombatAction("Upper_Slash");
                 }
 
@@ -155,7 +156,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.X))
                 {
-                    // Trigger the smash animation.
+                    
                     StartCombatAction("Smash");
                 }
 
@@ -170,7 +171,7 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.LeftShift))
                 {
-                    // Trigger the top-bottom throw animation.
+                    
                     StartCombatAction("Top-Bottom_Throw");
                 }
 
@@ -184,13 +185,13 @@ public class Combat : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.K))
                 {
-                    // Trigger the tackle animation.
+                   
                     StartCombatAction("Tackle");
                 }
 
                 if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.K))
                 {
-                    // Trigger the spin kick animation.
+                   
                     StartCombatAction("Spin_Kick");
                 }
 
@@ -206,11 +207,11 @@ public class Combat : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.LeftControl))
-                {
-                    // Trigger the clear animation.
-                    StartCombatAction("Clear");
-                }
+                //if (Input.GetKey(KeyCode.LeftControl))
+                //{
+                    
+                //    StartCombatAction("Clear");
+                //}
 
 
             }

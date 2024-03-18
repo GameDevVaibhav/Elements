@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon;
 using Photon.Pun;
+
+//Scripts to ignore so clients can control their own scripts.
 public class PlayerNetworking : MonoBehaviour
 {
     public MonoBehaviour[] scriptsToIgnore;

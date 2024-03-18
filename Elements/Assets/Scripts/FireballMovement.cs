@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//Some vfx needs movement towards the player. This Script finds the target and moves the vfx.
 public class FireballMovement : MonoBehaviour
 {
     public float rotationSpeed = 30.0f; 

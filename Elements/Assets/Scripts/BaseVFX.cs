@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using static UnityEngine.GraphicsBuffer;
 
+
+//This instantiate VFX from resources folder using name. This class is extended by orther vfx classes which passes the vfxname.
 public class BaseVFX : MonoBehaviourPun
 {
     
@@ -28,21 +30,13 @@ public class BaseVFX : MonoBehaviourPun
 
     }
 
-    // HandleVFX method can be overridden in the derived classes for specific implementations
+    
     public virtual void HandleVFX(string combatAction)
     {
         StartCoroutine(SpawnVFXWithDelay(defaultVFX, 0.5f, Vector3.zero));
     }
 
-    
-
-   
-
-
-    
   
-
-
     protected IEnumerator SpawnVFXWithDelay(string vfxPrefab, float delayDuration, Vector3 offset)
     {
         yield return new WaitForSeconds(delayDuration);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+
+//some vfx need movement so this script find opponent and move it as required.
 public class VFXMovement : MonoBehaviour
 {
     public string targetTag = "Opponent";

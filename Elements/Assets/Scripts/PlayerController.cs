@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Realtime;
 
+
+//Controls player movement, walking,reversewalking and jump, Fliping towards opponent and reset position of player if rematch 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;

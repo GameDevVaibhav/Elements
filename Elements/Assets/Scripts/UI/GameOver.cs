@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Photon;
 
+//Handles gameover scenerios like annoucing winner and if player wants to leave room or request for rematch. If requested for rematch then reset the health of players.
 public class GameOver : MonoBehaviourPunCallbacks
 {
     public Image result;
@@ -28,8 +29,7 @@ public class GameOver : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        // Only the Master Client checks the result
-       // if (PhotonNetwork.IsMasterClient)
+      
        
 
         
@@ -57,16 +57,16 @@ public class GameOver : MonoBehaviourPunCallbacks
             }
 
 
-            // Call the AnnounceWinner method on all clients
+            
             pv.RPC("AnnounceWinner", RpcTarget.All, player1Wins, isTie);
         }
     }
 
-    // Call this method remotely on all clients
+    
     [PunRPC]
     void AnnounceWinner(bool player1Wins, bool isTie)
     {
-       // SetGameOverOnAllPlayers(true);
+       
         if (isTie)
         {
             Debug.Log("It's a tie!");
@@ -96,7 +96,7 @@ public class GameOver : MonoBehaviourPunCallbacks
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        // When a player leaves the room, destroy their associated objects
+        
         if (!PhotonNetwork.IsMasterClient)
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -125,7 +125,7 @@ public class GameOver : MonoBehaviourPunCallbacks
 
     public void RequestRematch()
     {
-        // Check if current player is Player1 or Player2
+        
         if (PhotonNetwork.IsMasterClient)
         {
             photonView.RPC("SetRematchRequest", RpcTarget.Others, true);
@@ -137,11 +137,11 @@ public class GameOver : MonoBehaviourPunCallbacks
             isPlayer2RematchRequested = true;
         }
 
-        // If both players have requested a rematch, initiate rematch
+        
         if (isPlayer1RematchRequested && isPlayer2RematchRequested)
         {
             Debug.Log("Rematch Confirmed");
-           // SetGameOverOnAllPlayers(false);
+           
             photonView.RPC("HandleRematch", RpcTarget.All);
             isPlayer1RematchRequested = false;
             isPlayer2RematchRequested = false;
@@ -184,7 +184,7 @@ public class GameOver : MonoBehaviourPunCallbacks
 
     void ResetPlayersHealth()
     {
-        // Find both players and reset their health
+        
         Player_Health[] players = FindObjectsOfType<Player_Health>();
         foreach (Player_Health player in players)
         {

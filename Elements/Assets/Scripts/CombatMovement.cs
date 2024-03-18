@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//Some of the Combats needs player to move so this scripts moves the player.
 public class CombatMovement : MonoBehaviour
 {
     private Animator animator;
@@ -11,11 +14,11 @@ public class CombatMovement : MonoBehaviour
 
     void Start()
     {
-        // Get the Animator component.
+        
         animator = GetComponent<Animator>();
     }
 
-    // Called from Animation Event in the "Smash" animation timeline.
+   
     public void SmashMovement()
     {
         StartCoroutine(MovePlayerUpAndLeft(0.8f));

@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Has TakeDamage PunRPC which is called when player collides with vfx and sets the health of the player and same with defence. And also defence recovering.
 public class Player_Health : MonoBehaviour
 {
     PhotonView photonView;

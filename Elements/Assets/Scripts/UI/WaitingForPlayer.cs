@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+
+//after creation of room player1 will join and wait for player2. It sets the player intro videos and activate playerUI 
+
 public class WaitingForPlayer : MonoBehaviour
 {
     Player_Health[] players;

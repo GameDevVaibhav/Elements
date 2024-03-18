@@ -8,12 +8,14 @@ using Photon.Pun;
 using UnityEngine.UI;
 using TMPro;
 
-
+/*Includes all the Buttons and panels like create room will have map selection which is saved in playerprefs and also selected player.
+ Also contains music toggle and volume slider*/
 public class MainMenu : MonoBehaviour
 {
 
     public GameObject createRoomPanel;
     public GameObject joinRoomPanel;
+    public GameObject controlPanel;
 
     string selectedType;
     string selectedMap;
@@ -47,14 +49,22 @@ public class MainMenu : MonoBehaviour
     {
         createRoomPanel.SetActive(true);
         joinRoomPanel.SetActive(false);
+        controlPanel.SetActive(false);
     }
 
     public void OnJoinRoomButtonClick()
     {
         createRoomPanel.SetActive(false);
         joinRoomPanel.SetActive(true);
+        controlPanel.SetActive(false);
     }
 
+    public void OnControlButtonClick()
+    {
+        controlPanel.SetActive(true);
+        createRoomPanel.SetActive(false);
+        joinRoomPanel.SetActive(false);
+    }
     // Map buttons
     public void OnFireMapButtonClick()
     {
@@ -137,6 +147,7 @@ public class MainMenu : MonoBehaviour
     {
         createRoomPanel.SetActive(false);
         joinRoomPanel.SetActive(false);
+        controlPanel.SetActive(false);
     }
 
     void SelectMapButton(GameObject button)

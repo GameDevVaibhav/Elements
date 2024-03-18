@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class VFX_Player_Fire : BaseVFX
 {
     public GameObject tackleVFX;

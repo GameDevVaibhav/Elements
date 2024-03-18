@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+
+
+//this checks the collision with player and also set the damge of a particular vfx.
 public class VfxDamageHandler : MonoBehaviour
 {
     PhotonView vfxPV;

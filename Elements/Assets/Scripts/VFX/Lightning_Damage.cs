@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//Lightning vfx does not have a collider so here we directly call the take Damage method to reduce opponents health.
 public class Lightning_Damage : MonoBehaviour
 {
     public float damage;

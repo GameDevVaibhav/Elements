@@ -5,7 +5,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
 
-
+//Sets the defence health and player health and also the time. 
 public class Play_UI : MonoBehaviour
 {
     public TextMeshProUGUI healthPlayer1;

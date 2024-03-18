@@ -6,6 +6,8 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 
+
+//For connecting to Photon Server. And displaying the connection status.
 public class ConnectionToServer : MonoBehaviourPunCallbacks
 {
     public TextMeshProUGUI connectionStatus;

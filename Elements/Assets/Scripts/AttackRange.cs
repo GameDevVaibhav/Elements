@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+
+//Creates colliders at position of vfx 
+
 public class AttackRange : MonoBehaviour
 {
     public float range = 2.0f;

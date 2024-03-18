@@ -5,12 +5,13 @@ using UnityEngine;
 using UnityEngine.VFX;
 using static UnityEngine.GraphicsBuffer;
 
+//Finds the opponent and set the pos1 of lightning vfx pos1 is the end of the lightning so it strikes the opponent
 public class LightningPoints : MonoBehaviour
 {
-    // Reference to the VisualEffect component
+    
     private VisualEffect visualEffect;
 
-    // Reference to the GameObject whose transform will be used
+    
     GameObject targetObject;
 
    public Vector3 offset;
@@ -21,7 +22,7 @@ public class LightningPoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get the VisualEffect component attached to this GameObject
+        
         visualEffect = GetComponent<VisualEffect>();
         
 

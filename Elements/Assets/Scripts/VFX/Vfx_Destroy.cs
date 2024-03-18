@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Some vfx are destroyed after few seconds as they dont have selfDestroy logic.
 public class Vfx_Destroy : MonoBehaviour
 {
     public float delay;

@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
+
+
+// Sets the tag of player which belongs to that client.
 public class Player_Tag : MonoBehaviour
 {
     GameObject player;
