@@ -15,12 +15,14 @@ public class ConnectionToServer : MonoBehaviourPunCallbacks
     public void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
+        
     }
 
     public void Update()
     {
-        PhotonNetwork.ConnectUsingSettings();
-
+        
+        
+        
         if(PhotonNetwork.NetworkClientState.ToString()== "ConnectedToMasterServer")
         {
             connectionStatus.text = "connected";
@@ -29,10 +31,10 @@ public class ConnectionToServer : MonoBehaviourPunCallbacks
         else
         {
             connectionStatus.text = "disconnected";
-            
+            PhotonNetwork.ConnectUsingSettings();
         }
         
-        Debug.Log(connectionStatus.text);
+       
     }
 
     

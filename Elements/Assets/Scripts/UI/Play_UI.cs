@@ -4,9 +4,10 @@ using TMPro;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using Photon.Realtime;
 
 //Sets the defence health and player health and also the time. 
-public class Play_UI : MonoBehaviour
+public class Play_UI : MonoBehaviourPunCallbacks
 {
     public TextMeshProUGUI healthPlayer1;
     public TextMeshProUGUI healthPlayer2;
@@ -19,6 +20,7 @@ public class Play_UI : MonoBehaviour
     public Image timer;
 
     public GameObject gameOverUi;
+    public GameObject opponentDisconnected;
 
 
     public float timerValue = 0f; 
@@ -117,6 +119,11 @@ public class Play_UI : MonoBehaviour
         }
     }
 
-    
-   
+   public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        gameOverUi.SetActive(true);
+        opponentDisconnected.SetActive(true) ;
+    }
+
+
 }

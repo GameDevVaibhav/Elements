@@ -94,24 +94,7 @@ public class GameOver : MonoBehaviourPunCallbacks
 
    
 
-    public override void OnPlayerLeftRoom(Player otherPlayer)
-    {
-        
-        if (!PhotonNetwork.IsMasterClient)
-        {
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
-            foreach (GameObject player in players)
-            {
-                PhotonView pv = player.GetComponent<PhotonView>();
-                if (pv.Owner == otherPlayer)
-                {
-                    PhotonNetwork.Destroy(player);
-                    break;
-                }
-            }
-        }
-    }
+    
     public void LoadMainMenu()
     {
         photonView.RPC("LoadMainMenuRPC", RpcTarget.All);
@@ -120,7 +103,8 @@ public class GameOver : MonoBehaviourPunCallbacks
     [PunRPC]
     void LoadMainMenuRPC()
     {
-        SceneManager.LoadScene(0);
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel(0);
     }
 
     public void RequestRematch()

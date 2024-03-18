@@ -12,6 +12,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        
         Debug.Log("on joined room");
 
         playerType = PlayerPrefs.GetString("SelectedPlayerType","Player_Fire");
