@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     public GameObject createRoomPanel;
     public GameObject joinRoomPanel;
     public GameObject controlPanel;
+    public GameObject quitPanel;
 
     string selectedType;
     string selectedMap;
@@ -50,6 +51,7 @@ public class MainMenu : MonoBehaviour
         createRoomPanel.SetActive(true);
         joinRoomPanel.SetActive(false);
         controlPanel.SetActive(false);
+        quitPanel.SetActive(false);
     }
 
     public void OnJoinRoomButtonClick()
@@ -57,6 +59,7 @@ public class MainMenu : MonoBehaviour
         createRoomPanel.SetActive(false);
         joinRoomPanel.SetActive(true);
         controlPanel.SetActive(false);
+        quitPanel.SetActive(false);
     }
 
     public void OnControlButtonClick()
@@ -64,7 +67,18 @@ public class MainMenu : MonoBehaviour
         controlPanel.SetActive(true);
         createRoomPanel.SetActive(false);
         joinRoomPanel.SetActive(false);
+        quitPanel.SetActive(false);
     }
+    public void OnQuitButtonClick()
+    {
+        quitPanel.SetActive(true);
+        controlPanel.SetActive(false);
+        createRoomPanel.SetActive(false);
+        joinRoomPanel.SetActive(false);
+        
+    }
+    
+
     // Map buttons
     public void OnFireMapButtonClick()
     {
@@ -148,6 +162,7 @@ public class MainMenu : MonoBehaviour
         createRoomPanel.SetActive(false);
         joinRoomPanel.SetActive(false);
         controlPanel.SetActive(false);
+        quitPanel.SetActive(false);
     }
 
     void SelectMapButton(GameObject button)
